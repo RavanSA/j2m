@@ -1,0 +1,12 @@
+# Xcode
+.DS_Store
+xcuserdata/
+*.xcodeproj/xcuserdata/
+
+# Swift Package Manager
+.build/
+
+# CocoaPods
+Pods/
+*.lock
+
