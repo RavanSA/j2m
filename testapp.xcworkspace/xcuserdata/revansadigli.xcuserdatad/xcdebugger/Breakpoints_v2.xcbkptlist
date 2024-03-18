@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "D46F50B9-2AE5-4A15-BFF4-E0A8B6CCEAC8"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F1BF266C-C625-4571-9E90-6D621B1F8889"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testapp/Parsers/SwiftJsonParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "generateSwiftStructs(from:parentName:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F1BF266C-C625-4571-9E90-6D621B1F8889 - ffd57e50afa6132b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "default argument 1 of testapp.SwiftJsonParser.generateSwiftStructs(from: Swift.Dictionary&lt;Swift.String, Any&gt;, parentName: Swift.String) -&gt; Swift.String"
+                  moduleName = "testapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/revansadigli/Desktop/ios/testapp/testapp/Parsers/SwiftJsonParser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "F1BF266C-C625-4571-9E90-6D621B1F8889 - b0580e1570ae38c7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "testapp.SwiftJsonParser.generateSwiftStructs(from: Swift.Dictionary&lt;Swift.String, Any&gt;, parentName: Swift.String) -&gt; Swift.String"
+                  moduleName = "testapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/revansadigli/Desktop/ios/testapp/testapp/Parsers/SwiftJsonParser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "252">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4C42CB09-C9DA-4C3D-8BFA-BBB8F15111EC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testapp/Parsers/SwiftJsonParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "generateSwiftStructs(from:parentName:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4C42CB09-C9DA-4C3D-8BFA-BBB8F15111EC - ffd57e50afa6132b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "default argument 1 of testapp.SwiftJsonParser.generateSwiftStructs(from: Swift.Dictionary&lt;Swift.String, Any&gt;, parentName: Swift.String) -&gt; Swift.String"
+                  moduleName = "testapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/revansadigli/Desktop/ios/testapp/testapp/Parsers/SwiftJsonParser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "4C42CB09-C9DA-4C3D-8BFA-BBB8F15111EC - b0580e1570ae38c7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "testapp.SwiftJsonParser.generateSwiftStructs(from: Swift.Dictionary&lt;Swift.String, Any&gt;, parentName: Swift.String) -&gt; Swift.String"
+                  moduleName = "testapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/revansadigli/Desktop/ios/testapp/testapp/Parsers/SwiftJsonParser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "252">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5FCA06C2-CCD2-4302-A448-BD8FCD7598D4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testapp/Parsers/SwiftJsonParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "generateSwiftStructs(from:parentName:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "94B3FA45-192A-4AB8-B470-B1DF3E1A62A2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testapp/Parsers/SwiftJsonParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "generatePropertiesCode(from:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FAA6860F-3D36-4DDE-B8AD-020904E18EFF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testapp/Parsers/SwiftJsonParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "generateTopLevelStruct(parentName:json:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8419516B-3D28-4D45-B67E-C5965C77A5FD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testapp/Parsers/SwiftJsonParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "generateSwiftStructs(from:parentName:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BC8A8649-47C0-4BE5-8BF3-43DCA9D63342"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testapp/Parsers/SwiftJsonParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "generateSwiftStructs(from:parentName:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

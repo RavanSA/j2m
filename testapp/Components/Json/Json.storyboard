@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22155"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Json View Controller-->
+        <scene sceneID="PEd-7d-5j0">
+            <objects>
+                <viewController storyboardIdentifier="JsonViewController" id="bU7-R8-ocO" customClass="JsonViewController" customModule="testapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="tOy-S4-hL0">
+                        <rect key="frame" x="0.0" y="0.0" width="547" height="944"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <box boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="c7E-B8-vpi" customClass="ContentBar" customModule="Bagel" customModuleProvider="target">
+                                <rect key="frame" x="20" y="894" width="507" height="30"/>
+                                <view key="contentView" id="vYU-D8-bBl">
+                                    <rect key="frame" x="0.0" y="0.0" width="507" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button translatesAutoresizingMaskIntoConstraints="NO" id="UGx-aw-CdH">
+                                            <rect key="frame" x="276" y="2" width="15.5" height="23"/>
+                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="trash.fill" catalog="system" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="id4-8B-9cz">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="15" id="6BH-sC-9dO"/>
+                                                <constraint firstAttribute="height" constant="15" id="ISz-NC-uw0"/>
+                                            </constraints>
+                                            <connections>
+                                                <action selector="cleanJsonText:" target="bU7-R8-ocO" id="5TN-1j-WbG"/>
+                                            </connections>
+                                        </button>
+                                        <box boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="WTb-Hf-PCf" userLabel="input">
+                                            <rect key="frame" x="53" y="5" width="203" height="15"/>
+                                            <view key="contentView" ambiguous="YES" id="4mQ-mg-kpP" userLabel="1">
+                                                <rect key="frame" x="0.0" y="0.0" width="203" height="15"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gdW-Zl-Et1" userLabel="name">
+                                                        <rect key="frame" x="3" y="-4" width="197" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="igx-Xr-Cc3"/>
+                                                        </constraints>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" focusRingType="none" alignment="left" title="Root" placeholderString="Root" usesSingleLineMode="YES" id="Qku-pV-Ag6" customClass="VerticallyCenteredTextFieldCell" customModule="Bagel" customModuleProvider="target">
+                                                            <font key="font" metaFont="systemSemibold" size="13"/>
+                                                            <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="gdW-Zl-Et1" secondAttribute="trailing" constant="5" id="7if-Ub-Acf"/>
+                                                    <constraint firstItem="gdW-Zl-Et1" firstAttribute="top" secondItem="4mQ-mg-kpP" secondAttribute="top" id="J7a-lz-bor"/>
+                                                    <constraint firstItem="gdW-Zl-Et1" firstAttribute="leading" secondItem="4mQ-mg-kpP" secondAttribute="leading" constant="5" id="L7r-uS-61U"/>
+                                                    <constraint firstAttribute="bottom" secondItem="gdW-Zl-Et1" secondAttribute="bottom" constant="-4" id="d2Y-O0-OXn"/>
+                                                </constraints>
+                                            </view>
+                                            <color key="fillColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </box>
+                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="k8N-ln-zI9">
+                                            <rect key="frame" x="6" y="5" width="41" height="15"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" enabled="NO" alignment="left" title="Name" usesSingleLineMode="YES" id="cVb-aN-y1p">
+                                                <font key="font" metaFont="systemSemibold" size="13"/>
+                                                <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="WTb-Hf-PCf" firstAttribute="top" secondItem="UGx-aw-CdH" secondAttribute="top" id="1gL-1H-vCL"/>
+                                        <constraint firstItem="k8N-ln-zI9" firstAttribute="bottom" secondItem="WTb-Hf-PCf" secondAttribute="bottom" id="21d-DA-6uP"/>
+                                        <constraint firstItem="UGx-aw-CdH" firstAttribute="leading" secondItem="WTb-Hf-PCf" secondAttribute="trailing" constant="20" id="A45-jn-VgK"/>
+                                        <constraint firstItem="UGx-aw-CdH" firstAttribute="top" secondItem="k8N-ln-zI9" secondAttribute="top" id="Dxm-Qs-ekk"/>
+                                        <constraint firstItem="k8N-ln-zI9" firstAttribute="leading" secondItem="vYU-D8-bBl" secondAttribute="leading" constant="8" id="Nle-tx-U25"/>
+                                        <constraint firstItem="WTb-Hf-PCf" firstAttribute="width" secondItem="vYU-D8-bBl" secondAttribute="width" multiplier="0.4" id="ZlC-0v-Z79"/>
+                                        <constraint firstAttribute="bottom" secondItem="k8N-ln-zI9" secondAttribute="bottom" constant="5" id="d6y-Sx-IaG"/>
+                                        <constraint firstItem="UGx-aw-CdH" firstAttribute="top" secondItem="vYU-D8-bBl" secondAttribute="top" constant="10" id="iF3-H2-IYm"/>
+                                        <constraint firstItem="WTb-Hf-PCf" firstAttribute="bottom" secondItem="UGx-aw-CdH" secondAttribute="bottom" id="kZT-Lr-VLp"/>
+                                        <constraint firstItem="WTb-Hf-PCf" firstAttribute="leading" secondItem="k8N-ln-zI9" secondAttribute="trailing" constant="8" id="rkz-74-Ylj"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="h8e-bs-dzN"/>
+                                </constraints>
+                                <color key="borderColor" name="unemphasizedSelectedContentBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <color key="fillColor" name="contentBottomBarColor"/>
+                            </box>
+                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrC-34-hYb">
+                                <rect key="frame" x="20" y="20" width="507" height="874"/>
+                                <clipView key="contentView" drawsBackground="NO" id="zi6-IF-fyv">
+                                    <rect key="frame" x="0.0" y="0.0" width="507" height="874"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView wantsLayer="YES" importsGraphics="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="OsC-uU-2kf">
+                                            <rect key="frame" x="0.0" y="0.0" width="507" height="874"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <size key="minSize" width="507" height="874"/>
+                                            <size key="maxSize" width="978" height="10000000"/>
+                                            <color key="insertionPointColor" name="textInsertionPointColor" catalog="System" colorSpace="catalog"/>
+                                        </textView>
+                                    </subviews>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="7Tr-YE-E2X">
+                                    <rect key="frame" x="-100" y="-100" width="240" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="me9-EM-f0e">
+                                    <rect key="frame" x="491" y="0.0" width="16" height="874"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="yrC-34-hYb" firstAttribute="top" secondItem="c7E-B8-vpi" secondAttribute="bottom" id="0ba-sD-vwl"/>
+                            <constraint firstAttribute="bottom" secondItem="yrC-34-hYb" secondAttribute="bottom" constant="20" id="HAQ-Z9-ctf"/>
+                            <constraint firstItem="c7E-B8-vpi" firstAttribute="leading" secondItem="yrC-34-hYb" secondAttribute="leading" id="Klz-D2-E78"/>
+                            <constraint firstAttribute="trailing" secondItem="yrC-34-hYb" secondAttribute="trailing" constant="20" id="XpS-I0-3tX"/>
+                            <constraint firstItem="yrC-34-hYb" firstAttribute="leading" secondItem="tOy-S4-hL0" secondAttribute="leading" constant="20" id="t78-p5-kLh"/>
+                            <constraint firstItem="c7E-B8-vpi" firstAttribute="top" secondItem="tOy-S4-hL0" secondAttribute="top" constant="20" id="uDl-aZ-gs6"/>
+                            <constraint firstItem="c7E-B8-vpi" firstAttribute="trailing" secondItem="yrC-34-hYb" secondAttribute="trailing" id="wUg-Dg-Bam"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="jsonTextView" destination="OsC-uU-2kf" id="fjI-HK-VYP"/>
+                    </connections>
+                </viewController>
+                <customObject id="9uD-mB-xHs" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-837.5" y="444"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="trash.fill" catalog="system" width="15" height="17"/>
+        <namedColor name="contentBottomBarColor">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
