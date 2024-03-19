@@ -11,21 +11,21 @@ import macOSThemeKit
 class JsonViewController: NSViewController {
 
     @IBOutlet var jsonTextView: NSTextView!
+    @IBOutlet weak var structName: NSTextField!
     
-    var onJsonChangeText: ((String) -> ())?
+    var onJsonChangeText: ((String, String?) -> ())?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.wantsLayer = true
-        view.layer?.backgroundColor = NSColor(hex: 0x3A3A3A).cgColor
+        view.layer?.backgroundColor = NSColor(hex: 0x1F1F24).cgColor
         jsonTextView.delegate = self
     }
     
-    // Function to colorize JSON key-value pairs
     func colorizeJSONString(_ jsonString: String) -> NSAttributedString? {
-        let attributedString = NSMutableAttributedString(string: jsonString)
-        let jsonKeyColor = NSColor.blue // Set your desired color for JSON keys
-        let jsonValueColor = NSColor.red // Set your desired color for JSON values
+        let attributedString = changeStringColorAndSize(jsonString, color: NSColor(hex: 0x889999), fontSize: 15)
+        let jsonKeyColor = NSColor(hex: 0x268ad1)
+        let jsonValueColor = NSColor(hex: 0x2aa198)
         
         do {
             if let jsonObject = try parseJSONString(jsonString) {
@@ -39,7 +39,6 @@ class JsonViewController: NSViewController {
         return attributedString
     }
     
-    // Function to parse JSON string
     func parseJSONString(_ jsonString: String) throws -> Any? {
         guard let jsonData = jsonString.data(using: .utf8) else {
             throw NSError(domain: "Invalid JSON string", code: 0, userInfo: nil)
@@ -48,8 +47,8 @@ class JsonViewController: NSViewController {
         return try JSONSerialization.jsonObject(with: jsonData, options: [])
     }
     
-    // Recursive function to colorize JSON key-value pairs
     func colorizeJSON(_ jsonObject: Any, attributedString: NSMutableAttributedString, jsonKeyColor: NSColor, jsonValueColor: NSColor) {
+                
         switch jsonObject {
         case let dict as [String: Any]:
             for (key, value) in dict {
@@ -58,34 +57,36 @@ class JsonViewController: NSViewController {
                 colorizeJSON(value, attributedString: attributedString, jsonKeyColor: jsonKeyColor, jsonValueColor: jsonValueColor)
             }
         case let array as [Any]:
-            for (index, value) in array.enumerated() {
-                let valueString = "\(value)"
-                let valueRange = (attributedString.string as NSString).range(of: valueString)
-                attributedString.addAttribute(.foregroundColor, value: jsonValueColor, range: valueRange)
-                if valueString.starts(with: "{") || valueString.starts(with: "[") {
-                    colorizeJSON(value, attributedString: attributedString, jsonKeyColor: jsonKeyColor, jsonValueColor: jsonValueColor)
+            for element in array {
+                if let nestedDict = element as? [String: Any] {
+                    colorizeJSON(nestedDict, attributedString: attributedString, jsonKeyColor: jsonKeyColor, jsonValueColor: jsonValueColor)
+                } else if let nestedArray = element as? [Any] {
+                    colorizeJSON(nestedArray, attributedString: attributedString, jsonKeyColor: jsonKeyColor, jsonValueColor: jsonValueColor)
+                } else if let valueString = "\(element)" as? NSString {
+                    let valueRange = (attributedString.string as NSString).range(of: valueString as String)
+                    attributedString.addAttribute(.foregroundColor, value: jsonValueColor, range: valueRange)
                 }
             }
         default:
             break
         }
     }
-    
+
     @IBAction func cleanJsonText(_ sender: Any) {
         jsonTextView.string = ""
+    }
+    
+    @IBAction func structNameAction(_ sender: Any) {
+        onJsonChangeText?(jsonTextView.string, structName.stringValue)
     }
     
 }
 
 extension JsonViewController: NSTextViewDelegate {
     func textDidChange(_ notification: Notification) {
-        if let textView = notification.object as? NSTextView {
-            onJsonChangeText?(textView.string)
-            jsonTextView.string = textView.string
-//            if let attributedJSON = colorizeJSONString(textView.string) {
-//                        // Display the colorized JSON string in the text view
-//                        jsonTextView.textStorage?.setAttributedString(attributedJSON)
-//                    }
-         }
+        if let attributedJSON = colorizeJSONString(jsonTextView.string) {
+            onJsonChangeText?(jsonTextView.string, structName.stringValue)
+            jsonTextView.textStorage?.setAttributedString(attributedJSON)
+        }
     }
 }

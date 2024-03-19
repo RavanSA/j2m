@@ -14,24 +14,24 @@ import Foundation
 class SwiftJsonParser: NSObject {
 
     var rawJsonText: String
+    var structsArray: [String] = []
 
     init(rawJsonText: String) {
         self.rawJsonText = rawJsonText
     }
     
-    func convertToSwiftModel() {
+    func convertToSwiftModel(structName: String?) {
         if let jsonData = rawJsonText.data(using: .utf8),
            let jsonObject = try? JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
             
-            let swiftCode = /*generateTopLevelStruct(parentName: "Root", json: jsonObject) +*/ generateSwiftStructs(from: jsonObject)
+            let swiftCode = /*generateTopLevelStruct(parentName: "Root", json: jsonObject) +*/ generateSwiftStructs(from: jsonObject, parentName: structName ?? "Root")
             let userInfo: [String: Any] = ["model": swiftCode]
             NotificationCenter.default.post(name: Notifications.didSelectLanguage, object: nil, userInfo: userInfo)
         }
     }
     
-    func generateSwiftStructs(from json: [String: Any], parentName: String = "Root") -> String {
+    func generateSwiftStructs(from json: [String: Any], parentName: String) -> String {
         var structsCode = ""
-        var structsArray: [String] = []
 
         for (key, value) in json {
             // MARK: BUG - 1 - if the firselement of the dict is object generate top struct
@@ -40,7 +40,7 @@ class SwiftJsonParser: NSObject {
                 let structName = capitalizeFirstLetter(key)
                 guard !structsArray.contains(structName) else { continue }
                 let propertiesCode = generatePropertiesCode(from: dictValue)
-//                structsCode += "struct \(structName): Codable {\n\(propertiesCode)\n}\n\n"
+                structsCode += "struct \(structName): Codable {\n\(propertiesCode)\n}\n\n"
                 structsCode += generateSwiftStructs(from: dictValue, parentName: structName)
                 structsArray.append(structName)
             } else if let arrayValue = value as? [[String: Any]] {
@@ -51,7 +51,8 @@ class SwiftJsonParser: NSObject {
                 arrayValue[0].forEach { arr in
                     propertiesCode += generatePropertiesCode(from: ["\(arr.key)": arr.value])
                 }
-                structsCode += "struct \(structName): Codable {\n\(propertiesCode)\n}\n\n"
+//                structsCode += "struct \(structName): Codable {\n\(propertiesCode)\n}\n\n"
+                structsCode += generateSwiftStructs(from: arrayValue[0], parentName: structName)
                 structsArray.append(structName)
             } else {
                 let structName = parentName.capitalized

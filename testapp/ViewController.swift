@@ -40,8 +40,10 @@ class ViewController: NSViewController {
         if let destinationVC = segue.destinationController as? JsonViewController {
             
             self.jsonViewController = destinationVC
-            self.jsonViewController?.onJsonChangeText = { (jsonText) in
+            self.jsonViewController?.onJsonChangeText = { (jsonText, structName) in
+                print("strviewvc", structName)
                 ParserController.shared.jsonText = jsonText
+                ParserController.shared.structName = structName
             }
             
 //            self.projectsViewController?.viewModel?.register()

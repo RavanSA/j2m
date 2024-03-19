@@ -15,7 +15,7 @@ class ModelViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.wantsLayer = true
-        view.layer?.backgroundColor = NSColor(hex: 0x3A3A3A).cgColor
+        view.layer?.backgroundColor = NSColor(hex: 0x1F1F24).cgColor
         NotificationCenter.default.addObserver(self, selector: #selector(self.refreshItems), name: Notifications.didSelectLanguage, object: nil)
     }
     
@@ -23,8 +23,96 @@ class ModelViewController: NSViewController {
         if let userInfo = notification.userInfo as? [String: Any],
            let text = userInfo["model"] as? String {
             modelTextView.string = ""
-            modelTextView.string = text
+            
+            let attrStr = colorizeCode(text)
+            modelTextView.textStorage?.setAttributedString(attrStr)
         }
+    }
+    
+    func colorizeCode(_ code: String) -> NSAttributedString {
+        let range = (code as NSString).range(of: code)
+        let attributedString = changeStringColorAndSize(code, color: NSColor(hex: 0x41A1C0), fontSize: 15)
+            
+        let keywords: [String] = ["struct", "let", "var", "import", "Codable", "Int", "String", "Bool", "{", "}", "?"]
+        
+        let jsonModelWords = removeEmptyStringsAndNewlines(from: code).components(separatedBy: " ")
+
+        var currentLocation = 0
+        
+        jsonModelWords.forEach { word in
+            if let selectedKeyword = keywords.first(where: { word.contains($0) }) {
+                let nsString = code as NSString
+                let range = nsString.range(of: selectedKeyword, options: .literal, range: NSRange(location: currentLocation, length: nsString.length - currentLocation))
+                
+                if range.location != NSNotFound {
+                    let trimmedString = nsString.substring(with: range).trimmingCharacters(in: .whitespacesAndNewlines)
+                    attributedString.replaceCharacters(in: range, with: trimmedString)
+                    
+                    let newRange = NSRange(location: range.location, length: trimmedString.utf16.count)
+                    
+                    switch selectedKeyword {
+                    case "struct":
+                        let color = NSColor(hex: 0xFC5FA3)
+                        attributedString.addAttribute(.foregroundColor, value: color, range: newRange)
+                        break
+                    case "let", "var":
+                        let color = NSColor(hex: 0xFC5FA3)
+                        attributedString.addAttribute(.foregroundColor, value: color, range: newRange)
+                        break
+                    case "import":
+                        let color = NSColor(hex: 0xFC5FA3)
+                        attributedString.addAttribute(.foregroundColor, value: color, range: newRange)
+                        break
+                    case "Codable":
+                        let color = NSColor(hex: 0xD0A8FF)
+                        attributedString.addAttribute(.foregroundColor, value: color, range: newRange)
+                        break
+                    case "Int", "String", "Bool":
+                        let color = NSColor(hex: 0xD0A8FF)
+                        attributedString.addAttribute(.foregroundColor, value: color, range: newRange)
+                        break
+                    case "{", "}", "?":
+                        let color = NSColor(hex: 0xFFFFFF)
+                        attributedString.addAttribute(.foregroundColor, value: color, range: newRange)
+                        break
+                    default:
+                        let color = NSColor(hex: 0x41A1C0)
+                        break
+                    }
+                                        
+                    currentLocation = range.location + trimmedString.utf16.count
+                }
+            }
+        }
+
+        return attributedString
+    }
+    
+    func removeEmptyStringsAndNewlines(from string: String) -> String {
+        let components = string.components(separatedBy: .whitespacesAndNewlines)
+        let filteredComponents = components.filter { !$0.isEmpty && $0 != "\n" }
+        return filteredComponents.joined(separator: " ")
+    }
+    
+    @IBAction func onSettingsClicked(_ sender: Any) {
+        let alert = NSAlert()
+               alert.messageText = "This is a modal dialog"
+               alert.informativeText = "Are you sure you want to proceed?"
+               alert.addButton(withTitle: "Yes")
+               alert.addButton(withTitle: "No")
+               
+               let response = alert.runModal()
+               
+               switch response {
+               case .alertFirstButtonReturn:
+                   print("User clicked Yes")
+                   // Add your code to handle 'Yes' button click
+               case .alertSecondButtonReturn:
+                   print("User clicked No")
+                   // Add your code to handle 'No' button click
+               default:
+                   break
+               }
     }
     
 }

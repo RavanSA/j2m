@@ -28,6 +28,12 @@ class ParserController: NSObject {
         }
     }
     
+    var structName: String? {
+        didSet {
+            setLanguageForParsing()
+        }
+    }
+    
     override init() {
         super.init()
 
@@ -36,12 +42,13 @@ class ParserController: NSObject {
     private func setLanguageForParsing() {
         switch selectedLanguage {
         case .swift:
-            SwiftJsonParser(rawJsonText: jsonText ?? "").convertToSwiftModel()
+            print("Roottest", structName)
+            SwiftJsonParser(rawJsonText: jsonText ?? "").convertToSwiftModel(structName: structName)
             break
         case .kotlin:
             KotlinJsonParser(rawJsonText: jsonText ?? "").convertToKotlinDataClass()
         default:
-            SwiftJsonParser(rawJsonText: jsonText ?? "").convertToSwiftModel()
+            SwiftJsonParser(rawJsonText: jsonText ?? "").convertToSwiftModel(structName: structName)
         }
     }
     

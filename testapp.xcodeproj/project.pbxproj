@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		59534C4AA9C158224F3514BD /* Pods_testapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9FC034F80B96B6E8D0A436 /* Pods_testapp.framework */; };
+		C98FDA9A2BA9BFC200DE2CB6 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98FDA992BA9BFC200DE2CB6 /* Helpers.swift */; };
+		C98FDA9D2BA9DE0400DE2CB6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98FDA9C2BA9DE0400DE2CB6 /* SettingsViewController.swift */; };
+		C98FDA9F2BA9DE1200DE2CB6 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C98FDA9E2BA9DE1200DE2CB6 /* Settings.storyboard */; };
 		C9A2C0162BA19A6C0090534B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A2C0152BA19A6C0090534B /* AppDelegate.swift */; };
 		C9A2C0182BA19A6C0090534B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A2C0172BA19A6C0090534B /* ViewController.swift */; };
 		C9A2C01B2BA19A6C0090534B /* testapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9A2C0192BA19A6C0090534B /* testapp.xcdatamodeld */; };
@@ -36,6 +39,9 @@
 		863A6352A6C6F1020F0750E5 /* Pods-testapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testapp.release.xcconfig"; path = "Target Support Files/Pods-testapp/Pods-testapp.release.xcconfig"; sourceTree = "<group>"; };
 		ACDE9216DE5CDD31C277CC09 /* Pods-testapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testapp.debug.xcconfig"; path = "Target Support Files/Pods-testapp/Pods-testapp.debug.xcconfig"; sourceTree = "<group>"; };
 		BE9FC034F80B96B6E8D0A436 /* Pods_testapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C98FDA992BA9BFC200DE2CB6 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		C98FDA9C2BA9DE0400DE2CB6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C98FDA9E2BA9DE1200DE2CB6 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		C9A2C0122BA19A6C0090534B /* testapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9A2C0152BA19A6C0090534B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9A2C0172BA19A6C0090534B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +104,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C98FDA982BA9BFAD00DE2CB6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C98FDA992BA9BFC200DE2CB6 /* Helpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C98FDA9B2BA9DDC100DE2CB6 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C98FDA9C2BA9DE0400DE2CB6 /* SettingsViewController.swift */,
+				C98FDA9E2BA9DE1200DE2CB6 /* Settings.storyboard */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		C9A2C0092BA19A6C0090534B = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +148,7 @@
 				C9A2C0532BA2DC090090534B /* Parsers */,
 				C9A2C05A2BA310820090534B /* Extension */,
 				C9A2C0272BA19B330090534B /* Components */,
+				C98FDA982BA9BFAD00DE2CB6 /* Helpers */,
 				C9A2C0152BA19A6C0090534B /* AppDelegate.swift */,
 				C9A2C0172BA19A6C0090534B /* ViewController.swift */,
 				C9A2C01C2BA19A6E0090534B /* Assets.xcassets */,
@@ -138,6 +162,7 @@
 		C9A2C0272BA19B330090534B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				C98FDA9B2BA9DDC100DE2CB6 /* Settings */,
 				C9A2C02C2BA1A5910090534B /* Model */,
 				C9A2C02B2BA1A58C0090534B /* Json */,
 				C9A2C02A2BA1A5850090534B /* Languages */,
@@ -280,6 +305,7 @@
 				C9A2C04C2BA1DF910090534B /* Json.storyboard in Resources */,
 				C9A2C0302BA1AD870090534B /* Languages.storyboard in Resources */,
 				C9A2C01D2BA19A6E0090534B /* Assets.xcassets in Resources */,
+				C98FDA9F2BA9DE1200DE2CB6 /* Settings.storyboard in Resources */,
 				C9A2C0522BA1E6000090534B /* Model.storyboard in Resources */,
 				C9A2C0202BA19A6E0090534B /* Main.storyboard in Resources */,
 			);
@@ -339,6 +365,7 @@
 				C9A2C0182BA19A6C0090534B /* ViewController.swift in Sources */,
 				C9A2C03E2BA1B7AA0090534B /* Theme.swift in Sources */,
 				C9A2C0592BA3094D0090534B /* SwiftJsonParser.swift in Sources */,
+				C98FDA9D2BA9DE0400DE2CB6 /* SettingsViewController.swift in Sources */,
 				C9A2C0342BA1B6220090534B /* LanguageTableViewCell.swift in Sources */,
 				C9A2C0572BA2E2570090534B /* ParserController.swift in Sources */,
 				C9A2C0362BA1B6750090534B /* FontManager.swift in Sources */,
@@ -347,6 +374,7 @@
 				C9A2C0502BA1E5F60090534B /* ModelViewController.swift in Sources */,
 				C9C398782BA6720F003DE7A7 /* NSColor.swift in Sources */,
 				C9A2C01B2BA19A6C0090534B /* testapp.xcdatamodeld in Sources */,
+				C98FDA9A2BA9BFC200DE2CB6 /* Helpers.swift in Sources */,
 				C9A2C02E2BA1AD680090534B /* LanguagesViewController.swift in Sources */,
 				C9A2C05C2BA3109D0090534B /* String.swift in Sources */,
 				C9A2C0322BA1B5590090534B /* LanguagesModel.swift in Sources */,

@@ -9,4 +9,5 @@ import Foundation
 
 struct Notifications {
     static let didSelectLanguage = NSNotification.Name("didSelectLanguage")
+    static let onStructNameChanged = NSNotification.Name("onStructNameChanged")
 }
