@@ -12,6 +12,8 @@ class ModelViewController: NSViewController {
 
     @IBOutlet var modelTextView: NSTextView!
     
+    private var popover = NSPopover()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.wantsLayer = true
@@ -95,24 +97,13 @@ class ModelViewController: NSViewController {
     }
     
     @IBAction func onSettingsClicked(_ sender: Any) {
-        let alert = NSAlert()
-               alert.messageText = "This is a modal dialog"
-               alert.informativeText = "Are you sure you want to proceed?"
-               alert.addButton(withTitle: "Yes")
-               alert.addButton(withTitle: "No")
-               
-               let response = alert.runModal()
-               
-               switch response {
-               case .alertFirstButtonReturn:
-                   print("User clicked Yes")
-                   // Add your code to handle 'Yes' button click
-               case .alertSecondButtonReturn:
-                   print("User clicked No")
-                   // Add your code to handle 'No' button click
-               default:
-                   break
-               }
+        let storyboard = NSStoryboard(name: "Settings", bundle: nil)
+        guard let settingsViewController = storyboard.instantiateController(withIdentifier: "SettingsViewController") as? SettingsViewController else {
+            fatalError("Unable to instantiate SettingsViewController from the storyboard")
+        }
+        popover.contentViewController = settingsViewController
+        popover.behavior = .transient
+        popover.show(relativeTo: NSZeroRect, of: view, preferredEdge: .maxY)
     }
     
 }

@@ -121,6 +121,13 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		C98FDAA02BA9E3D100DE2CB6 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		C9A2C0092BA19A6C0090534B = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +169,7 @@
 		C9A2C0272BA19B330090534B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				C98FDAA02BA9E3D100DE2CB6 /* CustomViews */,
 				C98FDA9B2BA9DDC100DE2CB6 /* Settings */,
 				C9A2C02C2BA1A5910090534B /* Model */,
 				C9A2C02B2BA1A58C0090534B /* Json */,
