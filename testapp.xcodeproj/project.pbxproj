@@ -33,6 +33,8 @@
 		C9A2C05C2BA3109D0090534B /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A2C05B2BA3109D0090534B /* String.swift */; };
 		C9C398762BA637EF003DE7A7 /* KotlinJsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C398752BA637EF003DE7A7 /* KotlinJsonParser.swift */; };
 		C9C398782BA6720F003DE7A7 /* NSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C398772BA6720F003DE7A7 /* NSColor.swift */; };
+		C9C3987A2BAB0C0F003DE7A7 /* SettingsCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C398792BAB0C0F003DE7A7 /* SettingsCustomTableViewCell.swift */; };
+		C9C3987C2BAB0E25003DE7A7 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C3987B2BAB0E25003DE7A7 /* SettingsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +75,8 @@
 		C9A2C05B2BA3109D0090534B /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		C9C398752BA637EF003DE7A7 /* KotlinJsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KotlinJsonParser.swift; sourceTree = "<group>"; };
 		C9C398772BA6720F003DE7A7 /* NSColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColor.swift; sourceTree = "<group>"; };
+		C9C398792BAB0C0F003DE7A7 /* SettingsCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCustomTableViewCell.swift; sourceTree = "<group>"; };
+		C9C3987B2BAB0E25003DE7A7 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,8 @@
 			children = (
 				C98FDA9C2BA9DE0400DE2CB6 /* SettingsViewController.swift */,
 				C98FDA9E2BA9DE1200DE2CB6 /* Settings.storyboard */,
+				C9C398792BAB0C0F003DE7A7 /* SettingsCustomTableViewCell.swift */,
+				C9C3987B2BAB0E25003DE7A7 /* SettingsModel.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -373,12 +379,14 @@
 				C9A2C0182BA19A6C0090534B /* ViewController.swift in Sources */,
 				C9A2C03E2BA1B7AA0090534B /* Theme.swift in Sources */,
 				C9A2C0592BA3094D0090534B /* SwiftJsonParser.swift in Sources */,
+				C9C3987A2BAB0C0F003DE7A7 /* SettingsCustomTableViewCell.swift in Sources */,
 				C98FDA9D2BA9DE0400DE2CB6 /* SettingsViewController.swift in Sources */,
 				C9A2C0342BA1B6220090534B /* LanguageTableViewCell.swift in Sources */,
 				C9A2C0572BA2E2570090534B /* ParserController.swift in Sources */,
 				C9A2C0362BA1B6750090534B /* FontManager.swift in Sources */,
 				C9A2C0482BA1DB0E0090534B /* BaseTableView.swift in Sources */,
 				C9C398762BA637EF003DE7A7 /* KotlinJsonParser.swift in Sources */,
+				C9C3987C2BAB0E25003DE7A7 /* SettingsModel.swift in Sources */,
 				C9A2C0502BA1E5F60090534B /* ModelViewController.swift in Sources */,
 				C9C398782BA6720F003DE7A7 /* NSColor.swift in Sources */,
 				C9A2C01B2BA19A6C0090534B /* testapp.xcdatamodeld in Sources */,

@@ -32,7 +32,6 @@ class ModelViewController: NSViewController {
     }
     
     func colorizeCode(_ code: String) -> NSAttributedString {
-        let range = (code as NSString).range(of: code)
         let attributedString = changeStringColorAndSize(code, color: NSColor(hex: 0x41A1C0), fontSize: 15)
             
         let keywords: [String] = ["struct", "let", "var", "import", "Codable", "Int", "String", "Bool", "{", "}", "?"]
@@ -101,9 +100,10 @@ class ModelViewController: NSViewController {
         guard let settingsViewController = storyboard.instantiateController(withIdentifier: "SettingsViewController") as? SettingsViewController else {
             fatalError("Unable to instantiate SettingsViewController from the storyboard")
         }
-        popover.contentViewController = settingsViewController
-        popover.behavior = .transient
-        popover.show(relativeTo: NSZeroRect, of: view, preferredEdge: .maxY)
+        presentAsSheet(settingsViewController)
+//        popover.contentViewController = settingsViewController
+//        popover.behavior = .semitransient
+//        popover.show(relativeTo: NSZeroRect, of: view, preferredEdge: .maxY)
     }
     
 }

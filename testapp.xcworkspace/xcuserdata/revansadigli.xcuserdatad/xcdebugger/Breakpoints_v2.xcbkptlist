@@ -14,10 +14,10 @@
             filePath = "testapp/Parsers/SwiftJsonParser.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "generateSwiftStructs(from:parentName:)"
-            landmarkType = "7">
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "SwiftJsonParser"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "F1BF266C-C625-4571-9E90-6D621B1F8889 - ffd57e50afa6132b"
@@ -62,9 +62,9 @@
             filePath = "testapp/Parsers/SwiftJsonParser.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "generateSwiftStructs(from:parentName:)"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "convertToSwiftModel(structName:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -126,42 +126,10 @@
             filePath = "testapp/Parsers/SwiftJsonParser.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "generatePropertiesCode(from:_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "94B3FA45-192A-4AB8-B470-B1DF3E1A62A2 - 2b44f87fadad982e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "default argument 1 of testapp.SwiftJsonParser.generatePropertiesCode(from: Swift.Dictionary&lt;Swift.String, Any&gt;, _: Swift.Bool) -&gt; Swift.String"
-                  moduleName = "testapp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/revansadigli/Desktop/ios-repo/j2m/j2m/testapp/Parsers/SwiftJsonParser.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "93"
-                  endingLineNumber = "93"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  uuid = "94B3FA45-192A-4AB8-B470-B1DF3E1A62A2 - cb8d94a72d7b9469"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "testapp.SwiftJsonParser.generatePropertiesCode(from: Swift.Dictionary&lt;Swift.String, Any&gt;, _: Swift.Bool) -&gt; Swift.String"
-                  moduleName = "testapp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/revansadigli/Desktop/ios-repo/j2m/j2m/testapp/Parsers/SwiftJsonParser.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "204">
-               </Location>
-            </Locations>
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "SwiftJsonParser"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -174,10 +142,10 @@
             filePath = "testapp/Parsers/SwiftJsonParser.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "generateTopLevelStruct(parentName:json:)"
-            landmarkType = "7">
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "SwiftJsonParser"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -190,8 +158,8 @@
             filePath = "testapp/Parsers/SwiftJsonParser.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "generateSwiftStructs(from:parentName:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -200,7 +168,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "BC8A8649-47C0-4BE5-8BF3-43DCA9D63342"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testapp/Parsers/SwiftJsonParser.swift"
@@ -208,8 +176,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
             endingLineNumber = "36"
-            landmarkName = "BUG - 1 - if the firselement of the dict is object generate top struct"
-            landmarkType = "19">
+            landmarkName = "generateSwiftStructs(from:parentName:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
