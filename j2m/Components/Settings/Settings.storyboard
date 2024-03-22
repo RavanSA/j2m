@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22155"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22505"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -81,7 +81,7 @@
                                     </subviews>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="0vw-Vq-qMD">
-                                    <rect key="frame" x="1" y="212" width="426" height="16"/>
+                                    <rect key="frame" x="1" y="156" width="406" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="K2M-eR-cIp">
@@ -93,15 +93,32 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CEv-bI-4OD">
+                                <rect key="frame" x="5" y="211" width="15" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="0oz-dM-OFp"/>
+                                    <constraint firstAttribute="height" constant="10" id="S2N-8C-IRE"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="xmark.circle.fill" catalog="system" id="0Wx-79-j0R"/>
+                                <color key="contentTintColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                            </imageView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="CEv-bI-4OD" firstAttribute="top" secondItem="tOy-S4-hL0" secondAttribute="top" constant="7" id="brS-YV-5sn"/>
+                            <constraint firstItem="CEv-bI-4OD" firstAttribute="leading" secondItem="tOy-S4-hL0" secondAttribute="leading" constant="5" id="tAd-sN-0wk"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="closeBtn" destination="CEv-bI-4OD" id="zQg-eB-kY2"/>
                         <outlet property="tableView" destination="yWw-A8-0aE" id="bgp-M0-6zH"/>
                     </connections>
                 </viewController>
                 <customObject id="9uD-mB-xHs" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-94" y="131"/>
+            <point key="canvasLocation" x="-72" y="373.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="xmark.circle.fill" catalog="system" width="15" height="15"/>
+    </resources>
 </document>

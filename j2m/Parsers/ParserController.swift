@@ -34,6 +34,24 @@ class ParserController: NSObject {
         }
     }
     
+    var swiftOptionForCodingKeys: Bool? {
+        didSet {
+            setLanguageForParsing()
+        }
+    }
+    
+    var swiftOptionForVarOrLet: Bool? {
+        didSet {
+            setLanguageForParsing()
+        }
+    }
+    
+    var swiftOptionForOptional: Bool? {
+        didSet {
+            setLanguageForParsing()
+        }
+    }
+    
     override init() {
         super.init()
 
@@ -42,13 +60,12 @@ class ParserController: NSObject {
     private func setLanguageForParsing() {
         switch selectedLanguage {
         case .swift:
-            print("Roottest", structName)
-            SwiftJsonParser(rawJsonText: jsonText ?? "").convertToSwiftModel(structName: structName)
+            SwiftJsonParser(rawJsonText: jsonText ?? "", enumCodingKeysOption: swiftOptionForCodingKeys ?? false, varOrLet: swiftOptionForVarOrLet ?? false, isPropertiesOptional: swiftOptionForOptional ?? false).convertToSwiftModel(structName: structName)
             break
         case .kotlin:
             KotlinJsonParser(rawJsonText: jsonText ?? "").convertToKotlinDataClass()
         default:
-            SwiftJsonParser(rawJsonText: jsonText ?? "").convertToSwiftModel(structName: structName)
+            SwiftJsonParser(rawJsonText: jsonText ?? "", enumCodingKeysOption: swiftOptionForCodingKeys ?? false, varOrLet: swiftOptionForVarOrLet ?? false, isPropertiesOptional: swiftOptionForOptional ?? false).convertToSwiftModel(structName: structName)
         }
     }
     

@@ -34,7 +34,7 @@ class ModelViewController: NSViewController {
     func colorizeCode(_ code: String) -> NSAttributedString {
         let attributedString = changeStringColorAndSize(code, color: NSColor(hex: 0x41A1C0), fontSize: 15)
             
-        let keywords: [String] = ["struct", "let", "var", "import", "Codable", "Int", "String", "Bool", "{", "}", "?"]
+        let keywords: [String] = ["struct", "let", "var", "import", "Codable", "Int", "String", "Bool", "Double", "{", "}", "?", "enum", "case", "CodingKey", "Foundation"]
         
         let jsonModelWords = removeEmptyStringsAndNewlines(from: code).components(separatedBy: " ")
 
@@ -52,7 +52,7 @@ class ModelViewController: NSViewController {
                     let newRange = NSRange(location: range.location, length: trimmedString.utf16.count)
                     
                     switch selectedKeyword {
-                    case "struct":
+                    case "struct", "enum", "case", "CodingKey":
                         let color = NSColor(hex: 0xFC5FA3)
                         attributedString.addAttribute(.foregroundColor, value: color, range: newRange)
                         break
@@ -72,7 +72,7 @@ class ModelViewController: NSViewController {
                         let color = NSColor(hex: 0xD0A8FF)
                         attributedString.addAttribute(.foregroundColor, value: color, range: newRange)
                         break
-                    case "{", "}", "?":
+                    case "{", "}", "?", "Foundation":
                         let color = NSColor(hex: 0xFFFFFF)
                         attributedString.addAttribute(.foregroundColor, value: color, range: newRange)
                         break

@@ -7,28 +7,45 @@
 
 import Foundation
 
-// MARK: BUG
-// 1. if first element json is dictionary or object
-// 2. nested array element
-
 class SwiftJsonParser: NSObject {
 
     var rawJsonText: String
-    var structsArray: [String] = []
-
-    init(rawJsonText: String) {
-        self.rawJsonText = rawJsonText
+    var enumCodingKeysOption: Bool
+    var isPropertiesOptional: Bool {
+        didSet {
+            optionalSign = isPropertiesOptional ? "?" : ""
+        }
     }
+    var varOrLet: Bool {
+        didSet {
+            propertyType = varOrLet ? "var" : "let"
+        }
+    }
+    var propertyType: String = "let"
+    var optionalSign: String = "?"
+    var structsArray: [String] = []
+    
+    
+    init(rawJsonText: String, enumCodingKeysOption: Bool, varOrLet: Bool, isPropertiesOptional: Bool) {
+        self.rawJsonText = rawJsonText
+        self.enumCodingKeysOption = enumCodingKeysOption
+        self.varOrLet = varOrLet
+        self.isPropertiesOptional = isPropertiesOptional
+        self.propertyType = varOrLet ? "var" : "let"
+        self.optionalSign = isPropertiesOptional ? "?" : ""
+    }
+    
     
     func convertToSwiftModel(structName: String?) {
         if let jsonData = rawJsonText.data(using: .utf8),
-           let jsonObject = try? JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
+            let jsonObject = try? JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
             
-            let swiftCode = /*generateTopLevelStruct(parentName: "Root", json: jsonObject) +*/ generateSwiftStructs(from: jsonObject, parentName: structName ?? "Root")
+            let swiftCode = "import Foundation\n\n" + generateSwiftStructs(from: jsonObject, parentName: structName ?? "Root")
             let userInfo: [String: Any] = ["model": swiftCode]
             NotificationCenter.default.post(name: Notifications.didSelectLanguage, object: nil, userInfo: userInfo)
         }
     }
+    
     
     func generateSwiftStructs(from json: [String: Any], parentName: String) -> String {
         var structsCode = ""
@@ -40,7 +57,7 @@ class SwiftJsonParser: NSObject {
                 let structName = capitalizeFirstLetter(key)
                 guard !structsArray.contains(structName) else { continue }
                 let propertiesCode = generatePropertiesCode(from: dictValue)
-                structsCode += "struct \(structName): Codable {\n\(propertiesCode)\n}\n\n"
+                structsCode += "struct \(structName): Codable {\n\(propertiesCode)\n \(generateCodingKeys(from: dictValue))\n}\n\n"
                 structsCode += generateSwiftStructs(from: dictValue, parentName: structName)
                 structsArray.append(structName)
             } else if let arrayValue = value as? [[String: Any]] {
@@ -51,14 +68,13 @@ class SwiftJsonParser: NSObject {
                 arrayValue[0].forEach { arr in
                     propertiesCode += generatePropertiesCode(from: ["\(arr.key)": arr.value])
                 }
-//                structsCode += "struct \(structName): Codable {\n\(propertiesCode)\n}\n\n"
                 structsCode += generateSwiftStructs(from: arrayValue[0], parentName: structName)
                 structsArray.append(structName)
             } else {
                 let structName = parentName.capitalized
                 guard !structsArray.contains(structName) else { continue }
-
-                structsCode += "struct \(structName): Codable {\n\(generatePropertiesCode(from: json))\n}\n\n"
+                
+                structsCode += "struct \(structName): Codable {\n\(generatePropertiesCode(from: json))\n \(generateCodingKeys(from: json))\n}\n\n"
                 structsArray.append(structName)
             }
         }
@@ -66,6 +82,7 @@ class SwiftJsonParser: NSObject {
         return structsCode
     }
 
+    
     func capitalizeFirstLetter(_ text: String) -> String {
         let components = text.components(separatedBy: " ")
         let capitalizedComponents = components.map { $0.capitalized }
@@ -73,26 +90,7 @@ class SwiftJsonParser: NSObject {
     }
     
     
-    func generateTopLevelStruct(parentName: String, json: [String: Any]) -> String {
-        var structsCode = ""
-        let topLevelStructName = capitalizeFirstLetter(parentName)
-        structsCode += "struct \(topLevelStructName): Codable {\n"
-        for (key, value) in json {
-            let propertyName = capitalizeFirstLetter(key)
-            if let _ = value as? [String: Any] {
-                structsCode += "    let \(key): \(propertyName)?\n"
-            } else if let _ = value as? [[String: Any]] {
-                structsCode += "    let \(key): [\(propertyName)]?\n"
-            } else {
-                structsCode += "    let \(key): \(type(of: value))?\n"
-            }
-        }
-        structsCode += "}\n\n"
-        return structsCode
-    }
-    
     func generatePropertiesCode(from dictionary: [String: Any], _ onlyAddPropertyType: Bool = false) -> String {
-        
         var propertiesCode = ""
         for (key, value) in dictionary {
             let propertyType: String
@@ -107,9 +105,8 @@ class SwiftJsonParser: NSObject {
                 propertyType = "Bool"
             } else if value is [String: Any] {
                 propertyType = "\(key)"
-            } else if let arrayValue = value as? [Any], !arrayValue.isEmpty  {
+            } else if let arrayValue = value as? [Any], !arrayValue.isEmpty {
                 if isPrimitiveType(arrayValue[0]) {
-                    print("arrayvalue2 \(key)", arrayValue[0])
                     propertyType = "[" + generatePropertiesCode(from: ["": arrayValue[0]], true) + "]"
                 } else {
                     propertyType = "[\(key)]".capitalized
@@ -120,9 +117,9 @@ class SwiftJsonParser: NSObject {
             
             if !onlyAddPropertyType {
                 if value is [String: Any] {
-                    propertiesCode += "    let \(lowercaseFirstLetter(key)): \(capitalizeFirstLetter(propertyType))?\n"
+                    propertiesCode += "    \(self.propertyType) \(lowercaseFirstLetter(key)): \(capitalizeFirstLetter(propertyType))\(optionalSign)\n"
                 } else {
-                    propertiesCode += "    let \(lowercaseFirstLetter(key)): \(propertyType)?\n"
+                    propertiesCode += "    \(self.propertyType) \(lowercaseFirstLetter(key)): \(propertyType)\(optionalSign)\n"
                 }
             } else {
                 propertiesCode += " \(propertyType)"
@@ -133,12 +130,28 @@ class SwiftJsonParser: NSObject {
         return propertiesCode
     }
     
+    
+    func generateCodingKeys(from dictionary: [String: Any]) -> String {
+        
+        guard enumCodingKeysOption else { return "" }
+        
+        var codignCases = ""
+        
+        for (key, _) in dictionary {
+            codignCases += "        case \(lowercaseFirstLetter(key)) = \"\(key)\" \n"
+        }
+        
+        return "    enum CodingKeys: String, CodingKey { \n\(codignCases)     }"
+    }
+    
+    
     func lowercaseFirstLetter(_ text: String) -> String {
         guard let firstChar = text.first else {
             return text
         }
         return String(firstChar).lowercased() + text.dropFirst()
     }
+    
     
     func isPrimitiveType<T>(_ value: T) -> Bool {
         switch value {
