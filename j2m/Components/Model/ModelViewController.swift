@@ -12,8 +12,8 @@ class ModelViewController: NSViewController {
 
     @IBOutlet var modelTextView: NSTextView!
     
-    private var popover = NSPopover()
-
+    private var modelString: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.wantsLayer = true
@@ -25,7 +25,7 @@ class ModelViewController: NSViewController {
         if let userInfo = notification.userInfo as? [String: Any],
            let text = userInfo["model"] as? String {
             modelTextView.string = ""
-            
+            modelString = text
             let attrStr = colorizeCode(text)
             modelTextView.textStorage?.setAttributedString(attrStr)
         }
@@ -77,7 +77,6 @@ class ModelViewController: NSViewController {
                         attributedString.addAttribute(.foregroundColor, value: color, range: newRange)
                         break
                     default:
-                        let color = NSColor(hex: 0x41A1C0)
                         break
                     }
                                         
@@ -85,8 +84,11 @@ class ModelViewController: NSViewController {
                 }
             }
         }
-
-        return attributedString
+        
+        let headerText = prepareHeaderText()
+        headerText.append(attributedString)
+        
+        return headerText
     }
     
     func removeEmptyStringsAndNewlines(from string: String) -> String {
@@ -101,9 +103,32 @@ class ModelViewController: NSViewController {
             fatalError("Unable to instantiate SettingsViewController from the storyboard")
         }
         presentAsSheet(settingsViewController)
-//        popover.contentViewController = settingsViewController
-//        popover.behavior = .semitransient
-//        popover.show(relativeTo: NSZeroRect, of: view, preferredEdge: .maxY)
+    }
+    
+    
+    @IBAction func onCopyClicked(_ sender: Any) {
+        if let modelString {
+            let pasteboard = NSPasteboard.general
+            pasteboard.clearContents()
+            pasteboard.setString(modelString, forType: .string)
+        }
+    }
+    
+    private func prepareHeaderText()  -> NSMutableAttributedString {
+        let headerStr = """
+        // This file was generated from JSON Schema using J2M, do not modify it directly.
+        // To parse the JSON, add this file to your project and do:
+        //
+        //   let welcome = try? JSONDecoder().decode(Welcome.self, from: jsonData)\n\n
+        """
+        
+        let font = NSFont.systemFont(ofSize: 12)
+
+        let headerAttributes: [NSAttributedString.Key: Any] = [
+            .foregroundColor: NSColor.gray, .font: font
+        ]
+                
+        return NSMutableAttributedString(string: headerStr, attributes: headerAttributes)
     }
     
 }

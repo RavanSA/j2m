@@ -40,10 +40,11 @@ extension SettingsViewController: NSTableViewDataSource, NSTableViewDelegate {
         guard let cellView = tableView.makeView(withIdentifier: cellIdentifier, owner: self) as? SettingsCustomTableViewCell else {
             return nil
         }
+        let item = settingsOptionForSwift[ParserController.shared.selectedLanguage ?? .swift]?[row]
         
-        cellView.settingsDescription.stringValue = settingsOptionForSwift[ParserController.shared.selectedLanguage ?? .swift]?[row].description ?? ""
+        cellView.settingsDescription.stringValue = item?.description ?? ""
         cellView.checkBox.tag = row
-        cellView.checkBox.state = NSControl.StateValue(0)
+        cellView.checkBox.state = NSControl.StateValue(item?.currentState == true ? 1 : 0)
         cellView.checkBox.target = self
         cellView.checkBox.action = #selector(switchStateChanged(_:))
         
@@ -52,32 +53,36 @@ extension SettingsViewController: NSTableViewDataSource, NSTableViewDelegate {
         
     @objc func switchStateChanged(_ sender: NSButton) {
         let rowIndex = sender.tag
-        if ParserController.shared.selectedLanguage == .swift {
+        if ParserController.shared.selectedLanguage ?? .swift == .swift {
             switch rowIndex {
             case 0:
-                if sender.state == .on {
-                    ParserController.shared.swiftOptionForCodingKeys = true
-                } else {
-                    ParserController.shared.swiftOptionForCodingKeys = false
+                ParserController.shared.swiftOptionForCodingKeys = sender.state == .on
+                if var settingsOption = settingsOptionForSwift[ParserController.shared.selectedLanguage ?? .swift] {
+                    if let index = settingsOption.firstIndex(where: { $0.id == 1 }) {
+                        settingsOption[index].changeCurrentState(isActive: sender.state == .on)
+                        settingsOptionForSwift[ParserController.shared.selectedLanguage ?? .swift] = settingsOption
+                    }
                 }
-                break
             case 1:
-                if sender.state == .on {
-                    ParserController.shared.swiftOptionForVarOrLet = true
-                } else {
-                    ParserController.shared.swiftOptionForVarOrLet = false
+                ParserController.shared.swiftOptionForVarOrLet = sender.state == .on
+                if var settingsOption = settingsOptionForSwift[ParserController.shared.selectedLanguage ?? .swift] {
+                    if let index = settingsOption.firstIndex(where: { $0.id == 2 }) {
+                        settingsOption[index].changeCurrentState(isActive: sender.state == .on)
+                        settingsOptionForSwift[ParserController.shared.selectedLanguage ?? .swift] = settingsOption
+                    }
                 }
-                break
             case 2:
-                if sender.state == .on {
-                    ParserController.shared.swiftOptionForOptional = true
-                } else {
-                    ParserController.shared.swiftOptionForOptional = false
+                ParserController.shared.swiftOptionForOptional = sender.state == .on
+                if var settingsOption = settingsOptionForSwift[ParserController.shared.selectedLanguage ?? .swift] {
+                    if let index = settingsOption.firstIndex(where: { $0.id == 3 }) {
+                        settingsOption[index].changeCurrentState(isActive: sender.state == .on)
+                        settingsOptionForSwift[ParserController.shared.selectedLanguage ?? .swift] = settingsOption
+                    }
                 }
-                break
             default:
-                print("defaultswitch")
+                break
             }
+
         }
     }
     

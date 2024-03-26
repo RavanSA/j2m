@@ -10,17 +10,31 @@
         <!--Model View Controller-->
         <scene sceneID="PEd-7d-5j0">
             <objects>
-                <viewController storyboardIdentifier="ModelViewController" id="bU7-R8-ocO" customClass="ModelViewController" customModule="testapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ModelViewController" id="bU7-R8-ocO" customClass="ModelViewController" customModule="j2m" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="rt7-fA-Mk7">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <box boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="cm4-iy-BSx" customClass="ContentBar" customModule="testapp" customModuleProvider="target">
+                            <box boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="cm4-iy-BSx" customClass="ContentBar" customModule="j2m" customModuleProvider="target">
                                 <rect key="frame" x="20" y="250" width="410" height="30"/>
                                 <view key="contentView" id="Mmy-pM-YdD">
                                     <rect key="frame" x="0.0" y="0.0" width="410" height="30"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zw4-OS-Wl1">
+                                            <rect key="frame" x="350" y="-0.5" width="15.5" height="25"/>
+                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="doc.on.doc.fill" catalog="system" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="OFT-U9-cvf">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="15" id="M1G-0T-J3x"/>
+                                                <constraint firstAttribute="width" constant="15" id="zF5-qh-riY"/>
+                                            </constraints>
+                                            <connections>
+                                                <action selector="onCopyClicked:" target="bU7-R8-ocO" id="UIK-0G-jsv"/>
+                                            </connections>
+                                        </button>
                                         <button translatesAutoresizingMaskIntoConstraints="NO" id="OQC-I9-4ei">
                                             <rect key="frame" x="375" y="2" width="15.5" height="22"/>
                                             <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="gearshape.fill" catalog="system" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="LYW-MH-JQL">
@@ -36,8 +50,8 @@
                                             </connections>
                                         </button>
                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dAQ-Nk-BJk">
-                                            <rect key="frame" x="6" y="5" width="41" height="15"/>
-                                            <textFieldCell key="cell" lineBreakMode="clipping" enabled="NO" alignment="left" title="Name" usesSingleLineMode="YES" id="x5P-s7-Lr1">
+                                            <rect key="frame" x="6" y="5" width="4" height="15"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" enabled="NO" alignment="left" usesSingleLineMode="YES" id="x5P-s7-Lr1">
                                                 <font key="font" metaFont="systemSemibold" size="13"/>
                                                 <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -46,8 +60,10 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="OQC-I9-4ei" firstAttribute="top" secondItem="dAQ-Nk-BJk" secondAttribute="top" id="8aG-ad-PTg"/>
+                                        <constraint firstItem="zw4-OS-Wl1" firstAttribute="top" secondItem="OQC-I9-4ei" secondAttribute="top" id="DAJ-Hz-zog"/>
                                         <constraint firstAttribute="trailing" secondItem="OQC-I9-4ei" secondAttribute="trailing" constant="20" id="Iqz-c0-eWH"/>
                                         <constraint firstItem="dAQ-Nk-BJk" firstAttribute="leading" secondItem="Mmy-pM-YdD" secondAttribute="leading" constant="8" id="MgL-jF-8z0"/>
+                                        <constraint firstItem="OQC-I9-4ei" firstAttribute="leading" secondItem="zw4-OS-Wl1" secondAttribute="trailing" constant="10" id="Xvx-sW-UBo"/>
                                         <constraint firstAttribute="bottom" secondItem="dAQ-Nk-BJk" secondAttribute="bottom" constant="5" id="bAF-iT-FMA"/>
                                         <constraint firstItem="OQC-I9-4ei" firstAttribute="top" secondItem="Mmy-pM-YdD" secondAttribute="top" constant="10" id="lif-dB-Zqm"/>
                                     </constraints>
@@ -105,6 +121,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="doc.on.doc.fill" catalog="system" width="17" height="19"/>
         <image name="gearshape.fill" catalog="system" width="16" height="16"/>
     </resources>
 </document>

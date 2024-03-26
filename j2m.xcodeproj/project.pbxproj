@@ -22,7 +22,6 @@
 		C9A2C0342BA1B6220090534B /* LanguageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A2C0332BA1B6220090534B /* LanguageTableViewCell.swift */; };
 		C9A2C0362BA1B6750090534B /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A2C0352BA1B6750090534B /* FontManager.swift */; };
 		C9A2C03E2BA1B7AA0090534B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A2C03D2BA1B7AA0090534B /* Theme.swift */; };
-		C9A2C0482BA1DB0E0090534B /* BaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A2C0472BA1DB0E0090534B /* BaseTableView.swift */; };
 		C9A2C04C2BA1DF910090534B /* Json.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A2C04B2BA1DF910090534B /* Json.storyboard */; };
 		C9A2C04E2BA1E09F0090534B /* JsonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A2C04D2BA1E09F0090534B /* JsonViewController.swift */; };
 		C9A2C0502BA1E5F60090534B /* ModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A2C04F2BA1E5F60090534B /* ModelViewController.swift */; };
@@ -66,7 +65,6 @@
 		C9A2C0442BA1D3970090534B /* Effra_Std_Md.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Effra_Std_Md.ttf; sourceTree = "<group>"; };
 		C9A2C0452BA1D3970090534B /* Effra_Std_Lt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Effra_Std_Lt.ttf; sourceTree = "<group>"; };
 		C9A2C0462BA1D3970090534B /* DroidSansMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DroidSansMono.ttf; sourceTree = "<group>"; };
-		C9A2C0472BA1DB0E0090534B /* BaseTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableView.swift; sourceTree = "<group>"; };
 		C9A2C04B2BA1DF910090534B /* Json.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Json.storyboard; sourceTree = "<group>"; };
 		C9A2C04D2BA1E09F0090534B /* JsonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonViewController.swift; sourceTree = "<group>"; };
 		C9A2C04F2BA1E5F60090534B /* ModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewController.swift; sourceTree = "<group>"; };
@@ -131,13 +129,6 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		C98FDAA02BA9E3D100DE2CB6 /* CustomViews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CustomViews;
-			sourceTree = "<group>";
-		};
 		C9A2C0092BA19A6C0090534B = {
 			isa = PBXGroup;
 			children = (
@@ -179,12 +170,10 @@
 		C9A2C0272BA19B330090534B /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				C98FDAA02BA9E3D100DE2CB6 /* CustomViews */,
 				C98FDA9B2BA9DDC100DE2CB6 /* Settings */,
 				C9A2C02C2BA1A5910090534B /* Model */,
 				C9A2C02B2BA1A58C0090534B /* Json */,
 				C9A2C02A2BA1A5850090534B /* Languages */,
-				C9A2C0472BA1DB0E0090534B /* BaseTableView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -388,7 +377,6 @@
 				C9A2C0342BA1B6220090534B /* LanguageTableViewCell.swift in Sources */,
 				C9A2C0572BA2E2570090534B /* ParserController.swift in Sources */,
 				C9A2C0362BA1B6750090534B /* FontManager.swift in Sources */,
-				C9A2C0482BA1DB0E0090534B /* BaseTableView.swift in Sources */,
 				C9C398762BA637EF003DE7A7 /* KotlinJsonParser.swift in Sources */,
 				C9C3987C2BAB0E25003DE7A7 /* SettingsModel.swift in Sources */,
 				C9A2C0502BA1E5F60090534B /* ModelViewController.swift in Sources */,

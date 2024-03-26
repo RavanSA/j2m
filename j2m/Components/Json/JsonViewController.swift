@@ -10,7 +10,7 @@ import macOSThemeKit
 
 class JsonViewController: NSViewController {
 
-    @IBOutlet var jsonTextView: NSTextView!
+    @IBOutlet weak var jsonTextView: NSTextView!
     @IBOutlet weak var structName: NSTextField!
     
     var onJsonChangeText: ((String, String?) -> ())?

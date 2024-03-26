@@ -23,7 +23,7 @@ class SwiftJsonParser: NSObject {
     }
     var propertyType: String = "let"
     var optionalSign: String = "?"
-    var structsArray: [String] = []
+    var structsArray: Set<String>
     
     
     init(rawJsonText: String, enumCodingKeysOption: Bool, varOrLet: Bool, isPropertiesOptional: Bool) {
@@ -33,14 +33,19 @@ class SwiftJsonParser: NSObject {
         self.isPropertiesOptional = isPropertiesOptional
         self.propertyType = varOrLet ? "var" : "let"
         self.optionalSign = isPropertiesOptional ? "?" : ""
+        self.structsArray = []
     }
     
     
     func convertToSwiftModel(structName: String?) {
         if let jsonData = rawJsonText.data(using: .utf8),
             let jsonObject = try? JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
-            
-            let swiftCode = "import Foundation\n\n" + generateSwiftStructs(from: jsonObject, parentName: structName ?? "Root")
+            var swiftCode = ""
+            if let firstValue = jsonObject.values.first as? [String: Any], jsonObject.count == 1 {
+                swiftCode = "import Foundation\n\n" + generateTopLevelStruct(parentName: structName ?? "", json: jsonObject) + generateSwiftStructs(from: jsonObject, parentName: structName ?? "Root")
+            } else {
+                swiftCode = "import Foundation\n\n" + generateSwiftStructs(from: jsonObject, parentName: structName ?? "Root")
+            }
             let userInfo: [String: Any] = ["model": swiftCode]
             NotificationCenter.default.post(name: Notifications.didSelectLanguage, object: nil, userInfo: userInfo)
         }
@@ -49,33 +54,31 @@ class SwiftJsonParser: NSObject {
     
     func generateSwiftStructs(from json: [String: Any], parentName: String) -> String {
         var structsCode = ""
-
+        
         for (key, value) in json {
-            // MARK: BUG - 1 - if the firselement of the dict is object generate top struct
-
-            if let dictValue = value as? [String: Any] {
+            switch value {
+            case let dictValue as [String: Any]:
                 let structName = capitalizeFirstLetter(key)
-                guard !structsArray.contains(structName) else { continue }
-                let propertiesCode = generatePropertiesCode(from: dictValue)
-                structsCode += "struct \(structName): Codable {\n\(propertiesCode)\n \(generateCodingKeys(from: dictValue))\n}\n\n"
-                structsCode += generateSwiftStructs(from: dictValue, parentName: structName)
-                structsArray.append(structName)
-            } else if let arrayValue = value as? [[String: Any]] {
-                // MARK: BUG - 2 - nested arrays element need to be function recursive
-                let structName = capitalizeFirstLetter(key)
-                guard !structsArray.contains(structName) else { continue }
-                var propertiesCode = ""
-                arrayValue[0].forEach { arr in
-                    propertiesCode += generatePropertiesCode(from: ["\(arr.key)": arr.value])
+                if !structsArray.contains(structName) {
+                    structsCode += "struct \(structName): Codable {\n\(generatePropertiesCode(from: dictValue)) \(generateCodingKeys(from: dictValue))}\n\n"
+                    structsArray.insert(structName)
+                    structsCode += generateSwiftStructs(from: dictValue, parentName: structName)
                 }
-                structsCode += generateSwiftStructs(from: arrayValue[0], parentName: structName)
-                structsArray.append(structName)
-            } else {
+            case let arrayValue as [[String: Any]]:
+                let structName = capitalizeFirstLetter(key)
+                if !structsArray.contains(structName) {
+                    let propertiesCode = arrayValue[0].reduce("") { (result, arr) in
+                        result + generatePropertiesCode(from: ["\(arr.key)": arr.value])
+                    }
+                    structsCode += generateSwiftStructs(from: arrayValue[0], parentName: structName)
+                    structsArray.insert(structName)
+                }
+            default:
                 let structName = parentName.capitalized
-                guard !structsArray.contains(structName) else { continue }
-                
-                structsCode += "struct \(structName): Codable {\n\(generatePropertiesCode(from: json))\n \(generateCodingKeys(from: json))\n}\n\n"
-                structsArray.append(structName)
+                if !structsArray.contains(structName) {
+                    structsCode += "struct \(structName): Codable {\n\(generatePropertiesCode(from: json)) \(generateCodingKeys(from: json))}\n\n"
+                    structsArray.insert(structName)
+                }
             }
         }
 
@@ -141,7 +144,7 @@ class SwiftJsonParser: NSObject {
             codignCases += "        case \(lowercaseFirstLetter(key)) = \"\(key)\" \n"
         }
         
-        return "    enum CodingKeys: String, CodingKey { \n\(codignCases)     }"
+        return "\n    enum CodingKeys: String, CodingKey { \n\(codignCases)     }\n"
     }
     
     
@@ -160,6 +163,26 @@ class SwiftJsonParser: NSObject {
         default:
             return false
         }
+    }
+    
+    
+    func generateTopLevelStruct(parentName: String, json: [String: Any]) -> String {
+        var structsCode = ""
+        let topLevelStructName = capitalizeFirstLetter(parentName)
+        structsCode += "struct \(topLevelStructName): Codable {\n"
+        for (key, value) in json {
+            let propertyName = capitalizeFirstLetter(key)
+            if let _ = value as? [String: Any] {
+                structsCode += "    \(self.propertyType) \(key): \(propertyName)?\n"
+            } else if let _ = value as? [[String: Any]] {
+                structsCode += "    \(self.propertyType) \(key): [\(propertyName)]?\n"
+            } else {
+                structsCode += "    \(self.propertyType) \(key): \(type(of: value))?\n"
+            }
+        }
+        
+        structsCode += "\(generateCodingKeys(from: json))}\n\n"
+        return structsCode
     }
     
 }

@@ -10,7 +10,11 @@ import Foundation
 struct SettingsModel {
     let id: Int
     let description: String
-    let currentState: Bool?
+    var currentState: Bool?
+    
+    mutating func changeCurrentState(isActive: Bool) {
+        currentState = isActive
+    }
 }
 
 var settingsOptionForSwift: [Languages: [SettingsModel]] = [

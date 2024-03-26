@@ -29,42 +29,22 @@ class ViewController: NSViewController {
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
         
         if let destinationVC = segue.destinationController as? LanguagesViewController {
-            
             self.languageViewController = destinationVC
             self.languageViewController?.onLanguageSelect = { (language) in
                 ParserController.shared.selectedLanguage = language
             }
-            
         }
         
         if let destinationVC = segue.destinationController as? JsonViewController {
-            
             self.jsonViewController = destinationVC
             self.jsonViewController?.onJsonChangeText = { (jsonText, structName) in
-                print("strviewvc", structName)
                 ParserController.shared.jsonText = jsonText
                 ParserController.shared.structName = structName
             }
-            
-//            self.projectsViewController?.viewModel?.register()
-            
-//            self.projectsViewController?.onProjectSelect = { (selectedProjectController) in
-//
-//                BagelController.shared.selectedProjectController = selectedProjectController
-//            }
-            
         }
         
         if let destinationVC = segue.destinationController as? ModelViewController {
-            
             self.modelViewController = destinationVC
-//            self.projectsViewController?.viewModel?.register()
-            
-//            self.projectsViewController?.onProjectSelect = { (selectedProjectController) in
-//
-//                BagelController.shared.selectedProjectController = selectedProjectController
-//            }
-            
         }
         
     }
