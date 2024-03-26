@@ -10,9 +10,14 @@ import Foundation
 class KotlinJsonParser {
     
     var rawJsonText: String
+    var structsArray: Set<String>
+    var propertyType: String = "val"
+    var optionalSign: String = "?"
+
 
     init(rawJsonText: String) {
         self.rawJsonText = rawJsonText
+        self.structsArray = []
     }
     
     func convertToKotlinDataClass() {
@@ -20,54 +25,103 @@ class KotlinJsonParser {
            let jsonObject = try? JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
             let kotlinCode = generateDataClass(className: "Root", json: jsonObject)
             let userInfo: [String: Any] = ["model": kotlinCode]
-            NotificationCenter.default.post(name: Notifications.didSelectLanguage, object: nil, userInfo: userInfo)        }
+            NotificationCenter.default.post(name: Notifications.didSelectLanguage, object: nil, userInfo: userInfo)
+        }
     }
     
     func generateDataClass(className: String, json: [String: Any]) -> String {
-        var dataClassCode = "data class \(className) (\n"
-
+        var structsCode = ""
+        
         for (key, value) in json {
-            let propertyType = getPropertyType(value)
-
-            if let dictValue = value as? [String: Any] {
-                dataClassCode += generateDataClass(className: key.capitalized, json: dictValue)
-                dataClassCode += "    val \(key): \(key.capitalized)?\n"
-            } else if let arrayValue = value as? [[String: Any]], !arrayValue.isEmpty {
-                if let firstItem = arrayValue.first, let nestedObject = firstItem.keys.first {
-                    dataClassCode += generateDataClass(className: nestedObject.capitalized, json: firstItem)
-                    dataClassCode += "    val \(key): List<\(nestedObject.capitalized)>?\n"
-                } else {
-                    dataClassCode += "    val \(key): List<\(propertyType)>?\n"
+            switch value {
+            case let dictValue as [String: Any]:
+                let structName = capitalizeFirstLetter(key)
+                if !structsArray.contains(structName) {
+                    structsCode += "data class \(structName)(\n\(generatePropertiesCode(from: dictValue)) )\n\n"
+                    structsArray.insert(structName)
+                    structsCode += generateDataClass(className: structName, json: dictValue)
                 }
-            } else {
-                dataClassCode += "    val \(key): \(propertyType)?\n"
+            case let arrayValue as [[String: Any]]:
+                let structName = capitalizeFirstLetter(key)
+                if !structsArray.contains(structName) {
+                    let propertiesCode = arrayValue[0].reduce("") { (result, arr) in
+                        result + generatePropertiesCode(from: ["\(arr.key)": arr.value])
+                    }
+                    structsCode += generateDataClass(className: structName, json: arrayValue[0])
+                    structsArray.insert(structName)
+                }
+            default:
+                let structName = className.capitalized
+                if !structsArray.contains(structName) {
+                    structsCode += "data class \(structName)(\n\(generatePropertiesCode(from: json)))\n\n"
+                    structsArray.insert(structName)
+                }
             }
         }
 
-        dataClassCode += ")\n\n"
-        return dataClassCode
+        return structsCode
     }
     
-    func getPropertyType(_ value: Any) -> String {
-        switch value {
-        case is Int:
-            return "Int"
-        case is Double:
-            return "Double"
-        case is String:
-            return "String"
-        case is Bool:
-            return "Bool"
-        case is [String: Any]:
-            return "Any"
-        case let arrayValue as [[String: Any]] where !arrayValue.isEmpty:
-            if let nestedObject = arrayValue.first?.keys.first {
-                return "List<\(nestedObject.capitalized)>"
+    func generatePropertiesCode(from dictionary: [String: Any], _ onlyAddPropertyType: Bool = false) -> String {
+        var propertiesCode = ""
+        for (key, value) in dictionary {
+            let propertyType: String
+            
+            if value is Int {
+                propertyType = "Int"
+            } else if value is Double {
+                propertyType = "Double"
+            } else if value is String {
+                propertyType = "String"
+            } else if value is Bool {
+                propertyType = "Boolean"
+            } else if value is [String: Any] {
+                propertyType = "\(key)"
+            } else if let arrayValue = value as? [Any], !arrayValue.isEmpty {
+                if isPrimitiveType(arrayValue[0]) {
+                    propertyType = "List<" + generatePropertiesCode(from: ["": arrayValue[0]], true) + ">"
+                } else {
+                    propertyType = "List<\(key)>".capitalized
+                }
             } else {
-                return "List<Any>"
+                propertyType = "Any"
             }
+            
+            if !onlyAddPropertyType {
+                if value is [String: Any] {
+                    propertiesCode += "    \(self.propertyType) \(lowercaseFirstLetter(key)): \(capitalizeFirstLetter(propertyType))\(optionalSign)\n"
+                } else {
+                    propertiesCode += "    \(self.propertyType) \(lowercaseFirstLetter(key)): \(propertyType)\(optionalSign)\n"
+                }
+            } else {
+                propertiesCode += " \(propertyType)"
+            }
+
+        }
+
+        return propertiesCode
+    }
+    
+    func capitalizeFirstLetter(_ text: String) -> String {
+        let components = text.components(separatedBy: " ")
+        let capitalizedComponents = components.map { $0.capitalized }
+        return capitalizedComponents.joined()
+    }
+    
+    func isPrimitiveType<T>(_ value: T) -> Bool {
+        switch value {
+        case is Int, is UInt, is Int8, is UInt8, is Int16, is UInt16, is Int32, is UInt32, is Int64, is UInt64, is Float, is Double, is Bool, is Character, is String, is NSNumber:
+            return true
         default:
-            return "Any"
+            return false
         }
     }
+    
+    func lowercaseFirstLetter(_ text: String) -> String {
+        guard let firstChar = text.first else {
+            return text
+        }
+        return String(firstChar).lowercased() + text.dropFirst()
+    }
+    
 }

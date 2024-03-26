@@ -115,20 +115,50 @@ class ModelViewController: NSViewController {
     }
     
     private func prepareHeaderText()  -> NSMutableAttributedString {
-        let headerStr = """
+        switch ParserController.shared.selectedLanguage {
+        case .swift:
+            let headerStr = """
         // This file was generated from JSON Schema using J2M, do not modify it directly.
         // To parse the JSON, add this file to your project and do:
         //
         //   let welcome = try? JSONDecoder().decode(Welcome.self, from: jsonData)\n\n
         """
-        
-        let font = NSFont.systemFont(ofSize: 12)
-
-        let headerAttributes: [NSAttributedString.Key: Any] = [
-            .foregroundColor: NSColor.gray, .font: font
-        ]
-                
-        return NSMutableAttributedString(string: headerStr, attributes: headerAttributes)
+            
+            let font = NSFont.systemFont(ofSize: 12)
+            
+            let headerAttributes: [NSAttributedString.Key: Any] = [
+                .foregroundColor: NSColor.gray, .font: font
+            ]
+            
+            return NSMutableAttributedString(string: headerStr, attributes: headerAttributes)
+        case .kotlin:
+            let headerStr = """
+            package j2m\n\n
+            """
+            
+            let font = NSFont.systemFont(ofSize: 12)
+            
+            let headerAttributes: [NSAttributedString.Key: Any] = [
+                .foregroundColor: NSColor.gray, .font: font
+            ]
+            
+            return NSMutableAttributedString(string: headerStr, attributes: headerAttributes)
+        default:
+            let headerStr = """
+                // This file was generated from JSON Schema using J2M, do not modify it directly.
+                // To parse the JSON, add this file to your project and do:
+                //
+                //   let welcome = try? JSONDecoder().decode(Welcome.self, from: jsonData)\n\n
+                """
+            
+            let font = NSFont.systemFont(ofSize: 12)
+            
+            let headerAttributes: [NSAttributedString.Key: Any] = [
+                .foregroundColor: NSColor.gray, .font: font
+            ]
+            
+            return NSMutableAttributedString(string: headerStr, attributes: headerAttributes)
+        }
     }
     
 }

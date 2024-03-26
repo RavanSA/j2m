@@ -10,7 +10,7 @@
         <scene sceneID="daH-85-ufk">
             <objects>
                 <customObject id="0ej-4z-DNW" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="LanguagesViewController" id="Vac-0h-ATt" customClass="LanguagesViewController" customModule="testapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LanguagesViewController" id="Vac-0h-ATt" customClass="LanguagesViewController" customModule="j2m" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="5qi-Wi-hMd">
                         <rect key="frame" x="0.0" y="0.0" width="130" height="434"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -41,7 +41,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView identifier="LanguageTableCellView" focusRingType="none" id="byi-JH-X2N" customClass="LanguageTableCellView" customModule="testapp" customModuleProvider="target">
+                                                        <tableCellView identifier="LanguageTableCellView" focusRingType="none" id="byi-JH-X2N" customClass="LanguageTableCellView" customModule="j2m" customModuleProvider="target">
                                                             <rect key="frame" x="11" y="0.0" width="107" height="50"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>

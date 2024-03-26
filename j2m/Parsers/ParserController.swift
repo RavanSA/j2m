@@ -9,7 +9,7 @@ import Foundation
 
 enum Languages: String {
     case swift = "Swift"
-    case kotlin = "Kotlin (Beta)"
+    case kotlin = "Kotlin"
 }
 
 class ParserController: NSObject {
