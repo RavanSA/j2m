@@ -24,15 +24,15 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 ----
 
 
-## macOS
+## Mac
 
-### macOS custom_lane
+### mac custom_lane
 
 ```sh
-[bundle exec] fastlane macOS custom_lane
+[bundle exec] fastlane mac custom_lane
 ```
 
-Description of what the lane does
+j2m continuous delivery
 
 ----
 

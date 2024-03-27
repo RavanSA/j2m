@@ -1,62 +1,40 @@
-# This file contains the fastlane.tools configuration
-# You can find the documentation at https://docs.fastlane.tools
-#
-# For a list of all available actions, check out
-#
-#     https://docs.fastlane.tools/actions
-#
-# For a list of all available plugins, check out
-#
-#     https://docs.fastlane.tools/plugins/available-plugins
-#
-
-# Uncomment the line if you want fastlane to automatically update itself
-# update_fastlane
-
 default_platform(:ios)
 
-platform :macOS do
-  desc "Description of what the lane does"
+platform :mac do
+  desc "j2m continuous delivery"
   lane :custom_lane do
     # add actions here: https://docs.fastlane.tools/actions
   end
 end
 
-     - uses: maierj/fastlane-action@v2.2.0
-        with:
-          lane: 'release'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-
 lane :release do
-  isReleasable = analyze_commits(match: '*')
-  tag = "v#{lane_context[SharedValues::RELEASE_NEXT_VERSION]}"
+  tag = "v#{get_version_number}"
+
+  
   gym(
     scheme: "j2m",
     export_method: "mac-application",
     destination: "platform=macOS"
   )
+  
+  add_git_tag(
+    tag: tag
+  )
+  
+  push_to_git_remote
+  
+  notes = conventional_changelog(format: 'markdown', 
+                                 title: 'test', 
+                                 display_title: false, 
+                                 commit_url: 'https://github.com/RavanSA/j2m/commit')
+  
+  set_github_release(
+    repository_name: "RavanSA/j2m",
+    api_bearer: ENV["GITHUB_TOKEN"],
+    name: "Release #{lane_context[SharedValues::RELEASE_NEXT_VERSION]}",
+    tag_name: tag,
+    description: notes,
+    commitish: "main",
+    upload_assets: ["j2m.app", "j2m.app.dSYM.zip"]
+  )
 end
-
-  if isReleasable 
-    add_git_tag(
-      tag: tag
-    )   
-    push_to_git_remote
-    notes = conventional_changelog(format: 'markdown', 
-      title: ‘test’, 
-      display_title: false, 
-      commit_url: 'hhttps://github.com/RavanSA/j2m/commit')
-    set_github_release(
-      repository_name: “RavanSA/j2m”,
-      api_bearer: ENV["GITHUB_TOKEN"],
-      name: "Release #{lane_context[SharedValues::RELEASE_NEXT_VERSION]}",
-      tag_name: tag,
-      description: notes,
-      commitish: "main",
-      upload_assets: [“j2m.app", “j2m.app.dSYM.zip"]
-    )
-  else 
-    print("Not release candiate, do nothing")
-  end
