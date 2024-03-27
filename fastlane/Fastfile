@@ -29,7 +29,6 @@ lane :release do
   )
   
   push_to_git_remote
-  Git 
   
   set_github_release(
     repository_name: "RavanSA/j2m",

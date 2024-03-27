@@ -7,7 +7,5 @@ target 'j2m' do
 
   # Pods for testapp
 
-  pod 'SwiftLint'
-
 
 end

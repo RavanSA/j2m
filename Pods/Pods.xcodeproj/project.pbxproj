@@ -6,41 +6,17 @@
 	objectVersion = 56;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = AE7B4FB01588B9E6DF09CB79FC7CE7BD /* Build configuration list for PBXAggregateTarget "SwiftLint" */;
-			buildPhases = (
-			);
-			dependencies = (
-			);
-			name = SwiftLint;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
-		B28A0D4364D2866DD874D4CE2E692E0A /* Pods-j2m-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DC044339F1F93126C6BBB99E437A13D5 /* Pods-j2m-dummy.m */; };
-		D8798B54051229F4AC867A4C58F0F066 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1430F003D39D9906881A6AC724B7931 /* Cocoa.framework */; };
-		E64B424B897B7D299725F342CFED8AC6 /* Pods-j2m-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 695B250AB3A21C525680F6F5B1B4FFEB /* Pods-j2m-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		520F09141E32D8104AA7FCACCDE2590F /* Pods-j2m-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 695B250AB3A21C525680F6F5B1B4FFEB /* Pods-j2m-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68A758A8363F04E6679F9C3C753641E5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1430F003D39D9906881A6AC724B7931 /* Cocoa.framework */; };
+		86ABC70220F2B6D482F9652190C822FD /* Pods-j2m-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DC044339F1F93126C6BBB99E437A13D5 /* Pods-j2m-dummy.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		03B13754F4C82DD0301DFB0937DC23CB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 52B60EC2A583F24ACBB69C113F5488B9;
-			remoteInfo = SwiftLint;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1F90970289D8F76F77DAC3B5D54B70FB /* Pods-j2m.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-j2m.modulemap"; sourceTree = "<group>"; };
 		248DEE5FEB6F98B9D36725C13E937984 /* Pods-j2m */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-j2m"; path = Pods_j2m.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3EC0124719FE8EF5FDDD72C26F8A2F57 /* SwiftLint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.debug.xcconfig; sourceTree = "<group>"; };
 		545CEABE7735B6ACACCF01D87040759D /* Pods-j2m-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-j2m-acknowledgements.markdown"; sourceTree = "<group>"; };
 		695B250AB3A21C525680F6F5B1B4FFEB /* Pods-j2m-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-j2m-umbrella.h"; sourceTree = "<group>"; };
-		7EAB1DA481EDDC005A251D3A5E6BE4CD /* SwiftLint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.release.xcconfig; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C1430F003D39D9906881A6AC724B7931 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		C98009D657561AEC444A0E2866EF5129 /* Pods-j2m-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-j2m-Info.plist"; sourceTree = "<group>"; };
@@ -51,11 +27,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DC70DBACE4F3F6FFFE65D27A5EF4E5C3 /* Frameworks */ = {
+		2877373CA138A2F45D40C20C664985EE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8798B54051229F4AC867A4C58F0F066 /* Cocoa.framework in Frameworks */,
+				68A758A8363F04E6679F9C3C753641E5 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,24 +62,6 @@
 			path = "Target Support Files/Pods-j2m";
 			sourceTree = "<group>";
 		};
-		7FDA596DBE0337ACDFE55A210D54EF26 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				3EC0124719FE8EF5FDDD72C26F8A2F57 /* SwiftLint.debug.xcconfig */,
-				7EAB1DA481EDDC005A251D3A5E6BE4CD /* SwiftLint.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftLint";
-			sourceTree = "<group>";
-		};
-		965877409E01FB3D85D85E90E6B30185 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D96179D43A67C5D5323B0682D32C133C /* SwiftLint */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		B71F233535285AA93AE60284356CDB7B /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,19 +75,9 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				E0A1E60606E0BF6E2E10F1F01350DFE8 /* Frameworks */,
-				965877409E01FB3D85D85E90E6B30185 /* Pods */,
 				220CAEC4DF732B772EED7D8F8626935E /* Products */,
 				B71F233535285AA93AE60284356CDB7B /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		D96179D43A67C5D5323B0682D32C133C /* SwiftLint */ = {
-			isa = PBXGroup;
-			children = (
-				7FDA596DBE0337ACDFE55A210D54EF26 /* Support Files */,
-			);
-			name = SwiftLint;
-			path = SwiftLint;
 			sourceTree = "<group>";
 		};
 		E0A1E60606E0BF6E2E10F1F01350DFE8 /* Frameworks */ = {
@@ -151,11 +99,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		F4A4E590390E630F8CDE55BB67E77B37 /* Headers */ = {
+		552E40536F976506071C828D99FE2047 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E64B424B897B7D299725F342CFED8AC6 /* Pods-j2m-umbrella.h in Headers */,
+				520F09141E32D8104AA7FCACCDE2590F /* Pods-j2m-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,17 +112,16 @@
 /* Begin PBXNativeTarget section */
 		EB3021E0033B52BFC09E00370CB24113 /* Pods-j2m */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 18AC9658A55EC25452871D0706E0A078 /* Build configuration list for PBXNativeTarget "Pods-j2m" */;
+			buildConfigurationList = 24AC50017EC27E8D287C13016D7FB2C2 /* Build configuration list for PBXNativeTarget "Pods-j2m" */;
 			buildPhases = (
-				F4A4E590390E630F8CDE55BB67E77B37 /* Headers */,
-				40B5B3B5CF6D26C78C158CC920613AFE /* Sources */,
-				DC70DBACE4F3F6FFFE65D27A5EF4E5C3 /* Frameworks */,
-				F99BF7877A1453BAF2BFC74DE44444C0 /* Resources */,
+				552E40536F976506071C828D99FE2047 /* Headers */,
+				4AAC7B6B501488E51F35440C1E65A110 /* Sources */,
+				2877373CA138A2F45D40C20C664985EE /* Frameworks */,
+				5D660923821C2822834BC2EBC3748CA1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				501AF709A2786AA3A84B4BCD8037AD07 /* PBXTargetDependency */,
 			);
 			name = "Pods-j2m";
 			productName = Pods_j2m;
@@ -204,13 +151,12 @@
 			projectRoot = "";
 			targets = (
 				EB3021E0033B52BFC09E00370CB24113 /* Pods-j2m */,
-				52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F99BF7877A1453BAF2BFC74DE44444C0 /* Resources */ = {
+		5D660923821C2822834BC2EBC3748CA1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -220,45 +166,56 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		40B5B3B5CF6D26C78C158CC920613AFE /* Sources */ = {
+		4AAC7B6B501488E51F35440C1E65A110 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B28A0D4364D2866DD874D4CE2E692E0A /* Pods-j2m-dummy.m in Sources */,
+				86ABC70220F2B6D482F9652190C822FD /* Pods-j2m-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		501AF709A2786AA3A84B4BCD8037AD07 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftLint;
-			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
-			targetProxy = 03B13754F4C82DD0301DFB0937DC23CB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		12B4EBDFF0478587DC32360A687A6F57 /* Release */ = {
+		599A4E22A07D21AB57F81980788AC138 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7EAB1DA481EDDC005A251D3A5E6BE4CD /* SwiftLint.release.xcconfig */;
+			baseConfigurationReference = E33EDFBA5D86E36EFF875D3614F34E96 /* Pods-j2m.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-j2m/Pods-j2m-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-j2m/Pods-j2m.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		155036E7897CA32A26512DE214333F37 /* Debug */ = {
+		6C3446FFB9FF47577E9CA16920121B13 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F9388873BFC28B37569502EBC290E28A /* Pods-j2m.debug.xcconfig */;
 			buildSettings = {
@@ -362,24 +319,6 @@
 			};
 			name = Debug;
 		};
-		825BA5FAC3317D45740648EC38B22210 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3EC0124719FE8EF5FDDD72C26F8A2F57 /* SwiftLint.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				COMBINE_HIDPI_IMAGES = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
 		C0AB89DB0533D8E2B9201FA6579824B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -442,52 +381,14 @@
 			};
 			name = Release;
 		};
-		D6FDA8CC4834DD28ED71DBEEF61DF565 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E33EDFBA5D86E36EFF875D3614F34E96 /* Pods-j2m.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-j2m/Pods-j2m-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MODULEMAP_FILE = "Target Support Files/Pods-j2m/Pods-j2m.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		18AC9658A55EC25452871D0706E0A078 /* Build configuration list for PBXNativeTarget "Pods-j2m" */ = {
+		24AC50017EC27E8D287C13016D7FB2C2 /* Build configuration list for PBXNativeTarget "Pods-j2m" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				155036E7897CA32A26512DE214333F37 /* Debug */,
-				D6FDA8CC4834DD28ED71DBEEF61DF565 /* Release */,
+				6C3446FFB9FF47577E9CA16920121B13 /* Debug */,
+				599A4E22A07D21AB57F81980788AC138 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -497,15 +398,6 @@
 			buildConfigurations = (
 				7599BD86FD28576C20F8B9B6B5ACBEC9 /* Debug */,
 				C0AB89DB0533D8E2B9201FA6579824B7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AE7B4FB01588B9E6DF09CB79FC7CE7BD /* Build configuration list for PBXAggregateTarget "SwiftLint" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				825BA5FAC3317D45740648EC38B22210 /* Debug */,
-				12B4EBDFF0478587DC32360A687A6F57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
