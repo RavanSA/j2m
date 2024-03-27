@@ -24,18 +24,18 @@ lane :release do
     destination: "platform=macOS"
   )
   
-  add_git_tag(
-    tag: tag
-  )
+  #add_git_tag(
+  #  tag: tag
+  #)
   
   push_to_git_remote
   
   set_github_release(
     repository_name: "RavanSA/j2m",
     api_bearer: ENV["GITHUB_TOKEN"],
-    name: "Release v#{get_version_number}.#{build_number}",
+    name: "Release test",
     tag_name: tag,
-    description: test,
+    description: "test",
     commitish: "main",
     upload_assets: ["j2m.app", "j2m.app.dSYM.zip"]
   )

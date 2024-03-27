@@ -40,8 +40,6 @@
 		52CB168647FC6C82BB217A34 /* Pods_j2m.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_j2m.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BF785A04FB72AC5B8BA0BD4 /* Pods-j2m.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-j2m.debug.xcconfig"; path = "Target Support Files/Pods-j2m/Pods-j2m.debug.xcconfig"; sourceTree = "<group>"; };
 		7F69277C4FCF9675C26B0674 /* Pods-j2m.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-j2m.release.xcconfig"; path = "Target Support Files/Pods-j2m/Pods-j2m.release.xcconfig"; sourceTree = "<group>"; };
-		863A6352A6C6F1020F0750E5 /* Pods-testapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testapp.release.xcconfig"; path = "Target Support Files/Pods-testapp/Pods-testapp.release.xcconfig"; sourceTree = "<group>"; };
-		ACDE9216DE5CDD31C277CC09 /* Pods-testapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testapp.debug.xcconfig"; path = "Target Support Files/Pods-testapp/Pods-testapp.debug.xcconfig"; sourceTree = "<group>"; };
 		C917FF142BB3FF9E00016FF4 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		C98FDA992BA9BFC200DE2CB6 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		C98FDA9C2BA9DE0400DE2CB6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -101,8 +99,6 @@
 		840859BDD8F941745301AD94 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				ACDE9216DE5CDD31C277CC09 /* Pods-testapp.debug.xcconfig */,
-				863A6352A6C6F1020F0750E5 /* Pods-testapp.release.xcconfig */,
 				7BF785A04FB72AC5B8BA0BD4 /* Pods-j2m.debug.xcconfig */,
 				7F69277C4FCF9675C26B0674 /* Pods-j2m.release.xcconfig */,
 			);
@@ -386,6 +382,7 @@
 /* Begin XCBuildConfiguration section */
 		C9A2C0222BA19A6E0090534B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F69277C4FCF9675C26B0674 /* Pods-j2m.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -451,6 +448,7 @@
 		};
 		C9A2C0232BA19A6E0090534B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F69277C4FCF9675C26B0674 /* Pods-j2m.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -517,7 +515,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 33;
+				CURRENT_PROJECT_VERSION = 37;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -551,7 +549,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 33;
+				CURRENT_PROJECT_VERSION = 37;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
