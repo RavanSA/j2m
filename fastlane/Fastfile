@@ -9,7 +9,7 @@ end
 
 lane :release do
   increment_build_number(
-    xcodeproj: "j2m.xcodeproj" # Path to your Xcode project file
+    xcodeproj: "j2m.xcodeproj"
   )
 
   build_number = get_build_number.to_i + 1 
@@ -29,18 +29,14 @@ lane :release do
   )
   
   push_to_git_remote
-  
-  notes = conventional_changelog(format: 'markdown', 
-                                 title: 'test', 
-                                 display_title: false, 
-                                 commit_url: 'https://github.com/RavanSA/j2m/commit')
+  Git 
   
   set_github_release(
     repository_name: "RavanSA/j2m",
     api_bearer: ENV["GITHUB_TOKEN"],
     name: "Release v#{get_version_number}.#{build_number}",
     tag_name: tag,
-    description: notes,
+    description: test,
     commitish: "main",
     upload_assets: ["j2m.app", "j2m.app.dSYM.zip"]
   )
