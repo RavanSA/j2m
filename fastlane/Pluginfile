@@ -4,3 +4,4 @@
 
 gem 'fastlane-plugin-changelog'
 gem 'fastlane-plugin-semantic_release'
+gem 'fastlane-plugin-conventional_changelog', git: 'https://github.com/xotahal/fastlane-plugin-semantic_release.git'
