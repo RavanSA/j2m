@@ -116,7 +116,7 @@ class KotlinJsonParser {
             return false
         }
     }
-    
+     
     func lowercaseFirstLetter(_ text: String) -> String {
         guard let firstChar = text.first else {
             return text
