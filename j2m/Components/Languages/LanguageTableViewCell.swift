@@ -6,7 +6,6 @@
 //
 
 import Cocoa
-import macOSThemeKit
 
 class LanguageTableCellView: NSTableCellView {
 
@@ -17,7 +16,7 @@ class LanguageTableCellView: NSTableCellView {
     
     func setup(item: LanguagesModel) {
         self.languageText.stringValue = item.language.rawValue
-        self.languageText.textColor = ThemeColor.textColor
+        self.languageText.textColor = NSColor(hex: 0xffffff)
     }
     
     func applySelectedCell() {

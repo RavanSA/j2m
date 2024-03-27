@@ -6,7 +6,6 @@
 //
 
 import Cocoa
-import macOSThemeKit
 
 class ViewController: NSViewController {
 
@@ -21,9 +20,9 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.modelBox.fillColor = ThemeColor.projectListBackgroundColor
-        self.languageBox.fillColor = ThemeColor.deviceListBackgroundColor
-        self.jsonBox.fillColor = ThemeColor.packetListAndDetailBackgroundColor
+        self.modelBox.fillColor = ThemeColor.modelBoxColor
+        self.languageBox.fillColor = ThemeColor.languageBox
+        self.jsonBox.fillColor = ThemeColor.jsonBox
     }
     
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {

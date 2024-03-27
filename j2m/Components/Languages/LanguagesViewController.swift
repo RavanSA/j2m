@@ -6,7 +6,6 @@
 //
 
 import Cocoa
-import macOSThemeKit
 
 class LanguagesViewController: NSViewController {
         

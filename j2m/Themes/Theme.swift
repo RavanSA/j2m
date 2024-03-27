@@ -1,111 +1,56 @@
 //
-//  ThemeColor.swift
-//  Bagel
+//  Theme.swift
+//  j2m
 //
-//  Created by Yagiz Gurgul on 7.10.2018.
-//  Copyright © 2018 Yagiz Lab. All rights reserved.
+//  Created by Revan Sadigli on 27.03.2024.
 //
 
 import Cocoa
-import macOSThemeKit
 
-extension ThemeImage {
+class ThemeColor {
     
-    open class var clearIcon: ThemeImage {
-        return ThemeImage.image(with: #function)
+    static var modelBoxColor: NSColor {
+        return NSColor(hex: 0x232323)
     }
     
-    open class var copyToClipboardIcon: ThemeImage {
-        return ThemeImage.image(with: #function)
+    static var languageBox: NSColor {
+        return NSColor(hex: 0xF6F6F6)
     }
-}
 
-extension ThemeColor {
-    
-    open override class var labelColor: ThemeColor {
-        return ThemeColor.color(with: #function)
+    static var jsonBox: NSColor {
+        return NSColor(hex: 0xF0F0F0)
     }
     
-    open override class var controlBackgroundColor: ThemeColor {
-        return ThemeColor.color(with: #function)
+    static var jsonBackgroundColor: NSColor {
+        return NSColor(hex: 0x1F1F24)
     }
     
-    open override class var gridColor: ThemeColor {
-        return ThemeColor.color(with: #function)
+    static var modelTextDefaultColor: NSColor {
+        return NSColor(hex: 0x41A1C0)
     }
     
-    open override class var separatorColor: ThemeColor {
-        return ThemeColor.color(with: #function)
+    static var swiftDefKeywordsColor: NSColor {
+        return NSColor(hex: 0xFC5FA3)
     }
     
-    open override class var secondaryLabelColor: ThemeColor {
-        return ThemeColor.color(with: #function)
+    static var swiftPropertyKeywordsColor: NSColor {
+        return NSColor(hex: 0xFC5FA3)
     }
     
-    static var contentBarColor: ThemeColor {
-        return ThemeColor.color(with: #function)
+    static var swiftImportKeywordColor: NSColor {
+        return NSColor(hex: 0xFC5FA3)
     }
     
-    static var rowSelectedColor: ThemeColor {
-        return ThemeColor.color(with: #function)
+    static var swiftCodableKeywordColor: NSColor {
+        return NSColor(hex: 0xD0A8FF)
     }
     
-    static var statusGreenColor: ThemeColor {
-        return ThemeColor.color(with: #function)
+    static var swiftTypeKeywordColor: NSColor {
+        return NSColor(hex: 0xD0A8FF)
     }
     
-    static var statusOrangeColor: ThemeColor {
-        return ThemeColor.color(with: #function)
+    static var swiftSignKeywordColor: NSColor {
+        return NSColor(hex: 0xFFFFFF)
     }
-    
-    static var statusRedColor: ThemeColor {
-        return ThemeColor.color(with: #function)
-    }
-    
-    static var projectListBackgroundColor: ThemeColor {
-        return ThemeColor.color(with: #function)
-    }
-    
-    static var projectTextColor: ThemeColor {
-        return ThemeColor.color(with: #function)
-    }
-    
-    static var deviceListBackgroundColor: ThemeColor {
-        return ThemeColor.color(with: #function)
-    }
-    
-    static var deviceRowSelectedColor: ThemeColor {
-        return ThemeColor.color(with: #function)
-    }
-    
-    static var packetListAndDetailBackgroundColor: ThemeColor {
-        return ThemeColor.color(with: #function)
-    }
-}
-
-extension ThemeColor {
-    
-    static var httpMethodGetColor: ThemeColor {
-        return ThemeColor.color(with: #function)
-    }
-    
-    static var httpMethodPostColor: ThemeColor {
-        return ThemeColor.color(with: #function)
-    }
-    
-    static var httpMethodDeleteColor: ThemeColor {
-        return ThemeColor.color(with: #function)
-    }
-    
-    static var httpMethodPutColor: ThemeColor {
-        return ThemeColor.color(with: #function)
-    }
-    
-    static var httpMethodPatchColor: ThemeColor {
-        return ThemeColor.color(with: #function)
-    }
-    
-    static var httpMethodDefaultColor: ThemeColor {
-        return ThemeColor.color(with: #function)
-    }
+        
 }

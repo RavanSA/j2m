@@ -1,0 +1,24 @@
+name: Fastlane Workflow
+
+on:
+  push:
+    branches: [ main ]
+concurrency: 
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    name: Release MacOS app with Fastlane
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+       - uses: ruby/setup-ruby@v1
+         with:
+          ruby-version: ‘2.6.10’
+       - uses: maierj/fastlane-action@v2.2.0
+         with:
+          lane: 'release'

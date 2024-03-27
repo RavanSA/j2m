@@ -6,7 +6,6 @@
 //
 
 import Cocoa
-import macOSThemeKit
 
 class ModelViewController: NSViewController {
 
@@ -17,7 +16,7 @@ class ModelViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.wantsLayer = true
-        view.layer?.backgroundColor = NSColor(hex: 0x1F1F24).cgColor
+        view.layer?.backgroundColor = ThemeColor.jsonBackgroundColor.cgColor
         NotificationCenter.default.addObserver(self, selector: #selector(self.refreshItems), name: Notifications.didSelectLanguage, object: nil)
     }
     
@@ -32,7 +31,7 @@ class ModelViewController: NSViewController {
     }
     
     func colorizeCode(_ code: String) -> NSAttributedString {
-        let attributedString = changeStringColorAndSize(code, color: NSColor(hex: 0x41A1C0), fontSize: 15)
+        let attributedString = changeStringColorAndSize(code, color: ThemeColor.modelTextDefaultColor, fontSize: 15)
             
         let keywords: [String] = ["struct", "let", "var", "import", "Codable", "Int", "String", "Bool", "Double", "{", "}", "?", "enum", "case", "CodingKey", "Foundation"]
         
@@ -53,28 +52,22 @@ class ModelViewController: NSViewController {
                     
                     switch selectedKeyword {
                     case "struct", "enum", "case", "CodingKey":
-                        let color = NSColor(hex: 0xFC5FA3)
-                        attributedString.addAttribute(.foregroundColor, value: color, range: newRange)
+                        attributedString.addAttribute(.foregroundColor, value: ThemeColor.swiftDefKeywordsColor, range: newRange)
                         break
                     case "let", "var":
-                        let color = NSColor(hex: 0xFC5FA3)
-                        attributedString.addAttribute(.foregroundColor, value: color, range: newRange)
+                        attributedString.addAttribute(.foregroundColor, value: ThemeColor.swiftPropertyKeywordsColor, range: newRange)
                         break
                     case "import":
-                        let color = NSColor(hex: 0xFC5FA3)
-                        attributedString.addAttribute(.foregroundColor, value: color, range: newRange)
+                        attributedString.addAttribute(.foregroundColor, value: ThemeColor.swiftImportKeywordColor, range: newRange)
                         break
                     case "Codable":
-                        let color = NSColor(hex: 0xD0A8FF)
-                        attributedString.addAttribute(.foregroundColor, value: color, range: newRange)
+                        attributedString.addAttribute(.foregroundColor, value: ThemeColor.swiftCodableKeywordColor, range: newRange)
                         break
                     case "Int", "String", "Bool":
-                        let color = NSColor(hex: 0xD0A8FF)
-                        attributedString.addAttribute(.foregroundColor, value: color, range: newRange)
+                        attributedString.addAttribute(.foregroundColor, value: ThemeColor.swiftPropertyKeywordsColor, range: newRange)
                         break
                     case "{", "}", "?", "Foundation":
-                        let color = NSColor(hex: 0xFFFFFF)
-                        attributedString.addAttribute(.foregroundColor, value: color, range: newRange)
+                        attributedString.addAttribute(.foregroundColor, value: ThemeColor.swiftSignKeywordColor, range: newRange)
                         break
                     default:
                         break

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AFB61B8038A2A6455B56F7DF /* Pods_j2m.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52CB168647FC6C82BB217A34 /* Pods_j2m.framework */; };
+		C917FF152BB3FF9E00016FF4 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C917FF142BB3FF9E00016FF4 /* Theme.swift */; };
 		C98FDA9A2BA9BFC200DE2CB6 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98FDA992BA9BFC200DE2CB6 /* Helpers.swift */; };
 		C98FDA9D2BA9DE0400DE2CB6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98FDA9C2BA9DE0400DE2CB6 /* SettingsViewController.swift */; };
 		C98FDA9F2BA9DE1200DE2CB6 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C98FDA9E2BA9DE1200DE2CB6 /* Settings.storyboard */; };
@@ -21,7 +22,6 @@
 		C9A2C0322BA1B5590090534B /* LanguagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A2C0312BA1B5590090534B /* LanguagesModel.swift */; };
 		C9A2C0342BA1B6220090534B /* LanguageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A2C0332BA1B6220090534B /* LanguageTableViewCell.swift */; };
 		C9A2C0362BA1B6750090534B /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A2C0352BA1B6750090534B /* FontManager.swift */; };
-		C9A2C03E2BA1B7AA0090534B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A2C03D2BA1B7AA0090534B /* Theme.swift */; };
 		C9A2C04C2BA1DF910090534B /* Json.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A2C04B2BA1DF910090534B /* Json.storyboard */; };
 		C9A2C04E2BA1E09F0090534B /* JsonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A2C04D2BA1E09F0090534B /* JsonViewController.swift */; };
 		C9A2C0502BA1E5F60090534B /* ModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A2C04F2BA1E5F60090534B /* ModelViewController.swift */; };
@@ -42,6 +42,7 @@
 		7F69277C4FCF9675C26B0674 /* Pods-j2m.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-j2m.release.xcconfig"; path = "Target Support Files/Pods-j2m/Pods-j2m.release.xcconfig"; sourceTree = "<group>"; };
 		863A6352A6C6F1020F0750E5 /* Pods-testapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testapp.release.xcconfig"; path = "Target Support Files/Pods-testapp/Pods-testapp.release.xcconfig"; sourceTree = "<group>"; };
 		ACDE9216DE5CDD31C277CC09 /* Pods-testapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testapp.debug.xcconfig"; path = "Target Support Files/Pods-testapp/Pods-testapp.debug.xcconfig"; sourceTree = "<group>"; };
+		C917FF142BB3FF9E00016FF4 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		C98FDA992BA9BFC200DE2CB6 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		C98FDA9C2BA9DE0400DE2CB6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C98FDA9E2BA9DE1200DE2CB6 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -51,13 +52,11 @@
 		C9A2C01A2BA19A6C0090534B /* j2m.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = j2m.xcdatamodel; sourceTree = "<group>"; };
 		C9A2C01C2BA19A6E0090534B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9A2C01F2BA19A6E0090534B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C9A2C0212BA19A6E0090534B /* j2m.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = j2m.entitlements; sourceTree = "<group>"; };
 		C9A2C02D2BA1AD680090534B /* LanguagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesViewController.swift; sourceTree = "<group>"; };
 		C9A2C02F2BA1AD870090534B /* Languages.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Languages.storyboard; sourceTree = "<group>"; };
 		C9A2C0312BA1B5590090534B /* LanguagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesModel.swift; sourceTree = "<group>"; };
 		C9A2C0332BA1B6220090534B /* LanguageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageTableViewCell.swift; sourceTree = "<group>"; };
 		C9A2C0352BA1B6750090534B /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
-		C9A2C03D2BA1B7AA0090534B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		C9A2C03F2BA1D09D0090534B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C9A2C0412BA1D3970090534B /* Effra_Std_Bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Effra_Std_Bd.ttf; sourceTree = "<group>"; };
 		C9A2C0422BA1D3970090534B /* Effra_Std_BdIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Effra_Std_BdIt.ttf; sourceTree = "<group>"; };
@@ -161,7 +160,6 @@
 				C9A2C0172BA19A6C0090534B /* ViewController.swift */,
 				C9A2C01C2BA19A6E0090534B /* Assets.xcassets */,
 				C9A2C01E2BA19A6E0090534B /* Main.storyboard */,
-				C9A2C0212BA19A6E0090534B /* j2m.entitlements */,
 				C9A2C0192BA19A6C0090534B /* j2m.xcdatamodeld */,
 			);
 			path = j2m;
@@ -181,7 +179,7 @@
 		C9A2C0292BA19B430090534B /* Themes */ = {
 			isa = PBXGroup;
 			children = (
-				C9A2C03D2BA1B7AA0090534B /* Theme.swift */,
+				C917FF142BB3FF9E00016FF4 /* Theme.swift */,
 			);
 			path = Themes;
 			sourceTree = "<group>";
@@ -260,7 +258,6 @@
 				C9A2C00E2BA19A6C0090534B /* Sources */,
 				C9A2C00F2BA19A6C0090534B /* Frameworks */,
 				C9A2C0102BA19A6C0090534B /* Resources */,
-				5179C41F76929F114AB1BEB5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -321,23 +318,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5179C41F76929F114AB1BEB5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-j2m/Pods-j2m-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-j2m/Pods-j2m-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-j2m/Pods-j2m-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9E2C2CAE6762AAC340AB1E48 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -370,7 +350,6 @@
 				C9A2C0552BA2E0B60090534B /* Notifications.swift in Sources */,
 				C9A2C04E2BA1E09F0090534B /* JsonViewController.swift in Sources */,
 				C9A2C0182BA19A6C0090534B /* ViewController.swift in Sources */,
-				C9A2C03E2BA1B7AA0090534B /* Theme.swift in Sources */,
 				C9A2C0592BA3094D0090534B /* SwiftJsonParser.swift in Sources */,
 				C9C3987A2BAB0C0F003DE7A7 /* SettingsCustomTableViewCell.swift in Sources */,
 				C98FDA9D2BA9DE0400DE2CB6 /* SettingsViewController.swift in Sources */,
@@ -385,6 +364,7 @@
 				C98FDA9A2BA9BFC200DE2CB6 /* Helpers.swift in Sources */,
 				C9A2C02E2BA1AD680090534B /* LanguagesViewController.swift in Sources */,
 				C9A2C05C2BA3109D0090534B /* String.swift in Sources */,
+				C917FF152BB3FF9E00016FF4 /* Theme.swift in Sources */,
 				C9A2C0322BA1B5590090534B /* LanguagesModel.swift in Sources */,
 				C9A2C0162BA19A6C0090534B /* AppDelegate.swift in Sources */,
 			);
@@ -437,6 +417,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -500,6 +482,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -517,6 +500,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
@@ -529,7 +513,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
-				CODE_SIGN_ENTITLEMENTS = j2m/j2m.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -546,9 +530,11 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = project.testapp;
+				PRODUCT_BUNDLE_IDENTIFIER = project.j2m;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -561,7 +547,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
-				CODE_SIGN_ENTITLEMENTS = j2m/j2m.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -578,9 +564,11 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = project.testapp;
+				PRODUCT_BUNDLE_IDENTIFIER = project.j2m;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};

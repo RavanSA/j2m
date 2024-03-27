@@ -6,7 +6,6 @@
 //
 
 import Cocoa
-import macOSThemeKit
 
 class JsonViewController: NSViewController {
 
@@ -18,7 +17,7 @@ class JsonViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.wantsLayer = true
-        view.layer?.backgroundColor = NSColor(hex: 0x1F1F24).cgColor
+        view.layer?.backgroundColor = ThemeColor.jsonBackgroundColor.cgColor
         jsonTextView.delegate = self
     }
     

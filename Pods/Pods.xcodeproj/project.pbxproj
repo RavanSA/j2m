@@ -6,192 +6,110 @@
 	objectVersion = 56;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = AE7B4FB01588B9E6DF09CB79FC7CE7BD /* Build configuration list for PBXAggregateTarget "SwiftLint" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = SwiftLint;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		058FC9F1FDD54CEE6A7F27FBF6D0F67A /* macOSThemeKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 166ADD169B46015BD75843514C1A8894 /* macOSThemeKit-dummy.m */; };
-		0A526DCB78462EA69EEC267100F2FD25 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5089AEF114961A68670762D35131508 /* Theme.swift */; };
-		14A09951DE76496EEACF6830C636523E /* ThemeGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7322CEED176A59199D4A013F1D280503 /* ThemeGradient.swift */; };
-		2682D14C48779A35DBBA52277DBF6D62 /* LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD494EDB429847AA4BC80C96832E211 /* LightTheme.swift */; };
-		29D7AB570E872DBF514D745894B12D30 /* NSView+ThemeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA07DFED07073D33F24D1F04F32CA1 /* NSView+ThemeKit.swift */; };
-		2C03D08D48385F4C21C5002B1522488A /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E2BFBB32784C8BD0267544F15DFFB /* ThemeColor.swift */; };
-		2F0A69C443151D4545FE8FD0FE334353 /* macOSThemeKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E3C9E7658BC860AAE2D9BE04852A594 /* macOSThemeKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2F28D142C3EB4F8C082987E5F94DDC24 /* ThemeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9C153AA297581A447EDE195A293910 /* ThemeImage.swift */; };
-		4D2F8AD9E42BE2C0E8CA165880652771 /* NSImage+ThemeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90D7E378EF2E9CBCF2DA57F705FFB1E /* NSImage+ThemeKit.swift */; };
-		4DB90EAF070145ABF98F2FE59DA7B5DE /* DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC95C02A86402AEA53413856C2F7F20C /* DarkTheme.swift */; };
-		5DC3E223922C80E7D281151B99DF6A62 /* Pods-j2m-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F2AF6051E1A5FD7AF2E1326C57D4577C /* Pods-j2m-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6AA30D121A8449A7740581AA7B652AB2 /* NotificationName+ThemeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB08E4E633C3388AF96C1FECA2BD4920 /* NotificationName+ThemeKit.swift */; };
-		7089353729C089CD4F502C03681B14DF /* SystemTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6A727E55B8A91BA0303BF78C492F4F /* SystemTheme.swift */; };
-		7E3BD173418585207C1C41377DD3B9E7 /* Thread+ThemeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881880212EA39F2465DCEAF3AB80F1CB /* Thread+ThemeKit.swift */; };
-		7E5FDADB61F9C0B2B15295D2706BD39F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1430F003D39D9906881A6AC724B7931 /* Cocoa.framework */; };
-		8000502C0455730C391736CA007FD986 /* NSColor+ThemeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF38446940707B70C4BEA2EBFBE41C3C /* NSColor+ThemeKit.swift */; };
-		81451E6B19D9DA9C927659DC4CDF1B3D /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FF87998ED6E753A7AA053069FFB8EE /* ThemeManager.swift */; };
-		9DAC5DADBF60197FC01CFC5C984588B2 /* UserTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B499821B94728ED322B044C7F4CCA509 /* UserTheme.swift */; };
-		9F97F9500B01606F8F569D8A44134127 /* Pods-j2m-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B2163CA19689731A0A9EA8A2B16D4578 /* Pods-j2m-dummy.m */; };
-		A1D15B6B9CCD85B50D7A01678E553119 /* NSWindow+ThemeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF83EEEFB64FD5D8D3E604752506A8A1 /* NSWindow+ThemeKit.swift */; };
-		B3ADA5DB94B311DF9732D5C0C03E1435 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1430F003D39D9906881A6AC724B7931 /* Cocoa.framework */; };
-		B5453FCAC209435BE62EE962EF5F32A6 /* String+Substring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013D2F21E51B33AC72E9613885F06CBE /* String+Substring.swift */; };
-		C2BCF11E06D7482B718EC2D971629E7F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87BB3E05C855EA367F06B2C8936F01A /* Common.swift */; };
-		D226FF15604B6A114387835606D62AA2 /* ThemeManager+ObjectiveC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48738DEEE2B9753F0EF38C28DD451445 /* ThemeManager+ObjectiveC.swift */; };
-		DF833E8EC76F42DBB718BBC530F64E4A /* NSObject+ThemeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D1387F87681CF293316DA6F9CE90DF /* NSObject+ThemeKit.swift */; };
-		F704C8710DEDE63BA669241837E7C837 /* NSDictionary+UserTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81A66FAD0360264FBEB07A444E79B8A /* NSDictionary+UserTheme.swift */; };
+		B28A0D4364D2866DD874D4CE2E692E0A /* Pods-j2m-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DC044339F1F93126C6BBB99E437A13D5 /* Pods-j2m-dummy.m */; };
+		D8798B54051229F4AC867A4C58F0F066 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1430F003D39D9906881A6AC724B7931 /* Cocoa.framework */; };
+		E64B424B897B7D299725F342CFED8AC6 /* Pods-j2m-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 695B250AB3A21C525680F6F5B1B4FFEB /* Pods-j2m-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E2EA1346885739612652AF8688917F80 /* PBXContainerItemProxy */ = {
+		03B13754F4C82DD0301DFB0937DC23CB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4F2F8BE9ECE2B04C6D9CF9295316D0C1;
-			remoteInfo = macOSThemeKit;
+			remoteGlobalIDString = 52B60EC2A583F24ACBB69C113F5488B9;
+			remoteInfo = SwiftLint;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		013D2F21E51B33AC72E9613885F06CBE /* String+Substring.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Substring.swift"; path = "Sources/String+Substring.swift"; sourceTree = "<group>"; };
-		166ADD169B46015BD75843514C1A8894 /* macOSThemeKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "macOSThemeKit-dummy.m"; sourceTree = "<group>"; };
-		1D8DCDA7716200E3E4D5322DA894D1D1 /* Pods-j2m-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-j2m-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2165D9B9B6AC959642CAB38F4326F16D /* Pods-j2m-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-j2m-frameworks.sh"; sourceTree = "<group>"; };
+		1F90970289D8F76F77DAC3B5D54B70FB /* Pods-j2m.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-j2m.modulemap"; sourceTree = "<group>"; };
 		248DEE5FEB6F98B9D36725C13E937984 /* Pods-j2m */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-j2m"; path = Pods_j2m.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		30BC4B0134664F225A92A89C143A8AD9 /* Pods-j2m-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-j2m-Info.plist"; sourceTree = "<group>"; };
-		34D1387F87681CF293316DA6F9CE90DF /* NSObject+ThemeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSObject+ThemeKit.swift"; path = "Sources/NSObject+ThemeKit.swift"; sourceTree = "<group>"; };
-		35EF954F53A87FDB15378691A8C307BE /* macOSThemeKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = macOSThemeKit; path = macOSThemeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		48738DEEE2B9753F0EF38C28DD451445 /* ThemeManager+ObjectiveC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ThemeManager+ObjectiveC.swift"; path = "Sources/ThemeManager+ObjectiveC.swift"; sourceTree = "<group>"; };
-		62EE66F02EC4D56D20C83322FD6F6449 /* macOSThemeKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = macOSThemeKit.debug.xcconfig; sourceTree = "<group>"; };
-		667338DF185D21A13450B0FE3866782F /* Pods-j2m-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-j2m-acknowledgements.plist"; sourceTree = "<group>"; };
-		6DC2B31D340E98E48280A9D77D4CA9EA /* Pods-j2m.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-j2m.release.xcconfig"; sourceTree = "<group>"; };
-		7322CEED176A59199D4A013F1D280503 /* ThemeGradient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemeGradient.swift; path = Sources/ThemeGradient.swift; sourceTree = "<group>"; };
-		79B3B3BA55D8F6312F141C55904E412F /* macOSThemeKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = macOSThemeKit.release.xcconfig; sourceTree = "<group>"; };
-		7FAA07DFED07073D33F24D1F04F32CA1 /* NSView+ThemeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSView+ThemeKit.swift"; path = "Sources/NSView+ThemeKit.swift"; sourceTree = "<group>"; };
-		84E1A032927ADFCFA4B804DE938601EB /* macOSThemeKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "macOSThemeKit-Info.plist"; sourceTree = "<group>"; };
-		881880212EA39F2465DCEAF3AB80F1CB /* Thread+ThemeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Thread+ThemeKit.swift"; path = "Sources/Thread+ThemeKit.swift"; sourceTree = "<group>"; };
-		8E3C9E7658BC860AAE2D9BE04852A594 /* macOSThemeKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "macOSThemeKit-umbrella.h"; sourceTree = "<group>"; };
-		97FF87998ED6E753A7AA053069FFB8EE /* ThemeManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemeManager.swift; path = Sources/ThemeManager.swift; sourceTree = "<group>"; };
+		3EC0124719FE8EF5FDDD72C26F8A2F57 /* SwiftLint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.debug.xcconfig; sourceTree = "<group>"; };
+		545CEABE7735B6ACACCF01D87040759D /* Pods-j2m-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-j2m-acknowledgements.markdown"; sourceTree = "<group>"; };
+		695B250AB3A21C525680F6F5B1B4FFEB /* Pods-j2m-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-j2m-umbrella.h"; sourceTree = "<group>"; };
+		7EAB1DA481EDDC005A251D3A5E6BE4CD /* SwiftLint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.release.xcconfig; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A0E8CA83C485AD84AD57CE520EC6ACDD /* macOSThemeKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = macOSThemeKit.modulemap; sourceTree = "<group>"; };
-		A90D7E378EF2E9CBCF2DA57F705FFB1E /* NSImage+ThemeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSImage+ThemeKit.swift"; path = "Sources/NSImage+ThemeKit.swift"; sourceTree = "<group>"; };
-		ACDEC41E9ABFDDD16E97E1884E6EB0D2 /* Pods-j2m.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-j2m.debug.xcconfig"; sourceTree = "<group>"; };
-		B2163CA19689731A0A9EA8A2B16D4578 /* Pods-j2m-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-j2m-dummy.m"; sourceTree = "<group>"; };
-		B499821B94728ED322B044C7F4CCA509 /* UserTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserTheme.swift; path = Sources/UserTheme.swift; sourceTree = "<group>"; };
-		B87BB3E05C855EA367F06B2C8936F01A /* Common.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Common.swift; path = Sources/Common.swift; sourceTree = "<group>"; };
-		BF38446940707B70C4BEA2EBFBE41C3C /* NSColor+ThemeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSColor+ThemeKit.swift"; path = "Sources/NSColor+ThemeKit.swift"; sourceTree = "<group>"; };
 		C1430F003D39D9906881A6AC724B7931 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		C60E2BFBB32784C8BD0267544F15DFFB /* ThemeColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemeColor.swift; path = Sources/ThemeColor.swift; sourceTree = "<group>"; };
-		C81A66FAD0360264FBEB07A444E79B8A /* NSDictionary+UserTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSDictionary+UserTheme.swift"; path = "Sources/NSDictionary+UserTheme.swift"; sourceTree = "<group>"; };
-		CC95C02A86402AEA53413856C2F7F20C /* DarkTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DarkTheme.swift; path = Sources/DarkTheme.swift; sourceTree = "<group>"; };
-		CF83EEEFB64FD5D8D3E604752506A8A1 /* NSWindow+ThemeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSWindow+ThemeKit.swift"; path = "Sources/NSWindow+ThemeKit.swift"; sourceTree = "<group>"; };
-		D093F89B3E095B72BA46029002818325 /* macOSThemeKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "macOSThemeKit-prefix.pch"; sourceTree = "<group>"; };
-		D5089AEF114961A68670762D35131508 /* Theme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Theme.swift; path = Sources/Theme.swift; sourceTree = "<group>"; };
-		DA6A727E55B8A91BA0303BF78C492F4F /* SystemTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SystemTheme.swift; path = Sources/SystemTheme.swift; sourceTree = "<group>"; };
-		E897208575AE15CB411FEED6C877029D /* Pods-j2m.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-j2m.modulemap"; sourceTree = "<group>"; };
-		EB08E4E633C3388AF96C1FECA2BD4920 /* NotificationName+ThemeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NotificationName+ThemeKit.swift"; path = "Sources/NotificationName+ThemeKit.swift"; sourceTree = "<group>"; };
-		EB9C153AA297581A447EDE195A293910 /* ThemeImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemeImage.swift; path = Sources/ThemeImage.swift; sourceTree = "<group>"; };
-		F2AF6051E1A5FD7AF2E1326C57D4577C /* Pods-j2m-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-j2m-umbrella.h"; sourceTree = "<group>"; };
-		FBD494EDB429847AA4BC80C96832E211 /* LightTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LightTheme.swift; path = Sources/LightTheme.swift; sourceTree = "<group>"; };
+		C98009D657561AEC444A0E2866EF5129 /* Pods-j2m-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-j2m-Info.plist"; sourceTree = "<group>"; };
+		D59D50320FE0BF73EC22585B961FFAE1 /* Pods-j2m-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-j2m-acknowledgements.plist"; sourceTree = "<group>"; };
+		DC044339F1F93126C6BBB99E437A13D5 /* Pods-j2m-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-j2m-dummy.m"; sourceTree = "<group>"; };
+		E33EDFBA5D86E36EFF875D3614F34E96 /* Pods-j2m.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-j2m.release.xcconfig"; sourceTree = "<group>"; };
+		F9388873BFC28B37569502EBC290E28A /* Pods-j2m.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-j2m.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1B338A4851D269DC659F538337C15AE8 /* Frameworks */ = {
+		DC70DBACE4F3F6FFFE65D27A5EF4E5C3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E5FDADB61F9C0B2B15295D2706BD39F /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7743596F6D4C0BDFF909C95E346B26BF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B3ADA5DB94B311DF9732D5C0C03E1435 /* Cocoa.framework in Frameworks */,
+				D8798B54051229F4AC867A4C58F0F066 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		494671C242933ED9F0B33B667E4BAF9E /* Products */ = {
+		220CAEC4DF732B772EED7D8F8626935E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				35EF954F53A87FDB15378691A8C307BE /* macOSThemeKit */,
 				248DEE5FEB6F98B9D36725C13E937984 /* Pods-j2m */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5FE6D246224C8D23873465FC700EEBA6 /* Pods-j2m */ = {
+		7CA621EE11E0F50222ECC14C64E11A60 /* Pods-j2m */ = {
 			isa = PBXGroup;
 			children = (
-				E897208575AE15CB411FEED6C877029D /* Pods-j2m.modulemap */,
-				1D8DCDA7716200E3E4D5322DA894D1D1 /* Pods-j2m-acknowledgements.markdown */,
-				667338DF185D21A13450B0FE3866782F /* Pods-j2m-acknowledgements.plist */,
-				B2163CA19689731A0A9EA8A2B16D4578 /* Pods-j2m-dummy.m */,
-				2165D9B9B6AC959642CAB38F4326F16D /* Pods-j2m-frameworks.sh */,
-				30BC4B0134664F225A92A89C143A8AD9 /* Pods-j2m-Info.plist */,
-				F2AF6051E1A5FD7AF2E1326C57D4577C /* Pods-j2m-umbrella.h */,
-				ACDEC41E9ABFDDD16E97E1884E6EB0D2 /* Pods-j2m.debug.xcconfig */,
-				6DC2B31D340E98E48280A9D77D4CA9EA /* Pods-j2m.release.xcconfig */,
+				1F90970289D8F76F77DAC3B5D54B70FB /* Pods-j2m.modulemap */,
+				545CEABE7735B6ACACCF01D87040759D /* Pods-j2m-acknowledgements.markdown */,
+				D59D50320FE0BF73EC22585B961FFAE1 /* Pods-j2m-acknowledgements.plist */,
+				DC044339F1F93126C6BBB99E437A13D5 /* Pods-j2m-dummy.m */,
+				C98009D657561AEC444A0E2866EF5129 /* Pods-j2m-Info.plist */,
+				695B250AB3A21C525680F6F5B1B4FFEB /* Pods-j2m-umbrella.h */,
+				F9388873BFC28B37569502EBC290E28A /* Pods-j2m.debug.xcconfig */,
+				E33EDFBA5D86E36EFF875D3614F34E96 /* Pods-j2m.release.xcconfig */,
 			);
 			name = "Pods-j2m";
 			path = "Target Support Files/Pods-j2m";
 			sourceTree = "<group>";
 		};
-		634B063D289A4D6F796A23498E207996 /* macOSThemeKit */ = {
+		7FDA596DBE0337ACDFE55A210D54EF26 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				B87BB3E05C855EA367F06B2C8936F01A /* Common.swift */,
-				CC95C02A86402AEA53413856C2F7F20C /* DarkTheme.swift */,
-				FBD494EDB429847AA4BC80C96832E211 /* LightTheme.swift */,
-				EB08E4E633C3388AF96C1FECA2BD4920 /* NotificationName+ThemeKit.swift */,
-				BF38446940707B70C4BEA2EBFBE41C3C /* NSColor+ThemeKit.swift */,
-				C81A66FAD0360264FBEB07A444E79B8A /* NSDictionary+UserTheme.swift */,
-				A90D7E378EF2E9CBCF2DA57F705FFB1E /* NSImage+ThemeKit.swift */,
-				34D1387F87681CF293316DA6F9CE90DF /* NSObject+ThemeKit.swift */,
-				7FAA07DFED07073D33F24D1F04F32CA1 /* NSView+ThemeKit.swift */,
-				CF83EEEFB64FD5D8D3E604752506A8A1 /* NSWindow+ThemeKit.swift */,
-				013D2F21E51B33AC72E9613885F06CBE /* String+Substring.swift */,
-				DA6A727E55B8A91BA0303BF78C492F4F /* SystemTheme.swift */,
-				D5089AEF114961A68670762D35131508 /* Theme.swift */,
-				C60E2BFBB32784C8BD0267544F15DFFB /* ThemeColor.swift */,
-				7322CEED176A59199D4A013F1D280503 /* ThemeGradient.swift */,
-				EB9C153AA297581A447EDE195A293910 /* ThemeImage.swift */,
-				97FF87998ED6E753A7AA053069FFB8EE /* ThemeManager.swift */,
-				48738DEEE2B9753F0EF38C28DD451445 /* ThemeManager+ObjectiveC.swift */,
-				881880212EA39F2465DCEAF3AB80F1CB /* Thread+ThemeKit.swift */,
-				B499821B94728ED322B044C7F4CCA509 /* UserTheme.swift */,
-				78866197A15114EB4B64BF6BA68404F2 /* Support Files */,
-			);
-			name = macOSThemeKit;
-			path = macOSThemeKit;
-			sourceTree = "<group>";
-		};
-		78866197A15114EB4B64BF6BA68404F2 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				A0E8CA83C485AD84AD57CE520EC6ACDD /* macOSThemeKit.modulemap */,
-				166ADD169B46015BD75843514C1A8894 /* macOSThemeKit-dummy.m */,
-				84E1A032927ADFCFA4B804DE938601EB /* macOSThemeKit-Info.plist */,
-				D093F89B3E095B72BA46029002818325 /* macOSThemeKit-prefix.pch */,
-				8E3C9E7658BC860AAE2D9BE04852A594 /* macOSThemeKit-umbrella.h */,
-				62EE66F02EC4D56D20C83322FD6F6449 /* macOSThemeKit.debug.xcconfig */,
-				79B3B3BA55D8F6312F141C55904E412F /* macOSThemeKit.release.xcconfig */,
+				3EC0124719FE8EF5FDDD72C26F8A2F57 /* SwiftLint.debug.xcconfig */,
+				7EAB1DA481EDDC005A251D3A5E6BE4CD /* SwiftLint.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/macOSThemeKit";
+			path = "../Target Support Files/SwiftLint";
 			sourceTree = "<group>";
 		};
-		A101501C14845CBF8D2B600CA427F46E /* Targets Support Files */ = {
+		965877409E01FB3D85D85E90E6B30185 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5FE6D246224C8D23873465FC700EEBA6 /* Pods-j2m */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		A40D0F260151D8885EFFF7E74912BFB4 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				634B063D289A4D6F796A23498E207996 /* macOSThemeKit */,
+				D96179D43A67C5D5323B0682D32C133C /* SwiftLint */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B71F233535285AA93AE60284356CDB7B /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7CA621EE11E0F50222ECC14C64E11A60 /* Pods-j2m */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -199,10 +117,19 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				E0A1E60606E0BF6E2E10F1F01350DFE8 /* Frameworks */,
-				A40D0F260151D8885EFFF7E74912BFB4 /* Pods */,
-				494671C242933ED9F0B33B667E4BAF9E /* Products */,
-				A101501C14845CBF8D2B600CA427F46E /* Targets Support Files */,
+				965877409E01FB3D85D85E90E6B30185 /* Pods */,
+				220CAEC4DF732B772EED7D8F8626935E /* Products */,
+				B71F233535285AA93AE60284356CDB7B /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		D96179D43A67C5D5323B0682D32C133C /* SwiftLint */ = {
+			isa = PBXGroup;
+			children = (
+				7FDA596DBE0337ACDFE55A210D54EF26 /* Support Files */,
+			);
+			name = SwiftLint;
+			path = SwiftLint;
 			sourceTree = "<group>";
 		};
 		E0A1E60606E0BF6E2E10F1F01350DFE8 /* Frameworks */ = {
@@ -224,56 +151,30 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0B13B7B3417916E4A9F4D108EB4CB228 /* Headers */ = {
+		F4A4E590390E630F8CDE55BB67E77B37 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DC3E223922C80E7D281151B99DF6A62 /* Pods-j2m-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		65A2997063CDEC3AA88272E50947AA86 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2F0A69C443151D4545FE8FD0FE334353 /* macOSThemeKit-umbrella.h in Headers */,
+				E64B424B897B7D299725F342CFED8AC6 /* Pods-j2m-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4F2F8BE9ECE2B04C6D9CF9295316D0C1 /* macOSThemeKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BAA636EBF495CCEBCFAC9E7E3FA3B3E3 /* Build configuration list for PBXNativeTarget "macOSThemeKit" */;
-			buildPhases = (
-				65A2997063CDEC3AA88272E50947AA86 /* Headers */,
-				61D2CF864EC4DAABAEE4FEA1D4B0A5CE /* Sources */,
-				1B338A4851D269DC659F538337C15AE8 /* Frameworks */,
-				5CCA063C31695AF96606B9D1CC2AE45D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = macOSThemeKit;
-			productName = macOSThemeKit;
-			productReference = 35EF954F53A87FDB15378691A8C307BE /* macOSThemeKit */;
-			productType = "com.apple.product-type.framework";
-		};
 		EB3021E0033B52BFC09E00370CB24113 /* Pods-j2m */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 99D063C6B969971C17EEEFD324AA90E4 /* Build configuration list for PBXNativeTarget "Pods-j2m" */;
+			buildConfigurationList = 18AC9658A55EC25452871D0706E0A078 /* Build configuration list for PBXNativeTarget "Pods-j2m" */;
 			buildPhases = (
-				0B13B7B3417916E4A9F4D108EB4CB228 /* Headers */,
-				56BE65B173C4AD7BF9ED87E815A3C0B9 /* Sources */,
-				7743596F6D4C0BDFF909C95E346B26BF /* Frameworks */,
-				DCF2B66596E649352FA667A20164E539 /* Resources */,
+				F4A4E590390E630F8CDE55BB67E77B37 /* Headers */,
+				40B5B3B5CF6D26C78C158CC920613AFE /* Sources */,
+				DC70DBACE4F3F6FFFE65D27A5EF4E5C3 /* Frameworks */,
+				F99BF7877A1453BAF2BFC74DE44444C0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				26CD702B2A0C7F96D322116B10CD00A9 /* PBXTargetDependency */,
+				501AF709A2786AA3A84B4BCD8037AD07 /* PBXTargetDependency */,
 			);
 			name = "Pods-j2m";
 			productName = Pods_j2m;
@@ -298,25 +199,18 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 494671C242933ED9F0B33B667E4BAF9E /* Products */;
+			productRefGroup = 220CAEC4DF732B772EED7D8F8626935E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4F2F8BE9ECE2B04C6D9CF9295316D0C1 /* macOSThemeKit */,
 				EB3021E0033B52BFC09E00370CB24113 /* Pods-j2m */,
+				52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5CCA063C31695AF96606B9D1CC2AE45D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DCF2B66596E649352FA667A20164E539 /* Resources */ = {
+		F99BF7877A1453BAF2BFC74DE44444C0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -326,94 +220,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		56BE65B173C4AD7BF9ED87E815A3C0B9 /* Sources */ = {
+		40B5B3B5CF6D26C78C158CC920613AFE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F97F9500B01606F8F569D8A44134127 /* Pods-j2m-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		61D2CF864EC4DAABAEE4FEA1D4B0A5CE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C2BCF11E06D7482B718EC2D971629E7F /* Common.swift in Sources */,
-				4DB90EAF070145ABF98F2FE59DA7B5DE /* DarkTheme.swift in Sources */,
-				2682D14C48779A35DBBA52277DBF6D62 /* LightTheme.swift in Sources */,
-				058FC9F1FDD54CEE6A7F27FBF6D0F67A /* macOSThemeKit-dummy.m in Sources */,
-				6AA30D121A8449A7740581AA7B652AB2 /* NotificationName+ThemeKit.swift in Sources */,
-				8000502C0455730C391736CA007FD986 /* NSColor+ThemeKit.swift in Sources */,
-				F704C8710DEDE63BA669241837E7C837 /* NSDictionary+UserTheme.swift in Sources */,
-				4D2F8AD9E42BE2C0E8CA165880652771 /* NSImage+ThemeKit.swift in Sources */,
-				DF833E8EC76F42DBB718BBC530F64E4A /* NSObject+ThemeKit.swift in Sources */,
-				29D7AB570E872DBF514D745894B12D30 /* NSView+ThemeKit.swift in Sources */,
-				A1D15B6B9CCD85B50D7A01678E553119 /* NSWindow+ThemeKit.swift in Sources */,
-				B5453FCAC209435BE62EE962EF5F32A6 /* String+Substring.swift in Sources */,
-				7089353729C089CD4F502C03681B14DF /* SystemTheme.swift in Sources */,
-				0A526DCB78462EA69EEC267100F2FD25 /* Theme.swift in Sources */,
-				2C03D08D48385F4C21C5002B1522488A /* ThemeColor.swift in Sources */,
-				14A09951DE76496EEACF6830C636523E /* ThemeGradient.swift in Sources */,
-				2F28D142C3EB4F8C082987E5F94DDC24 /* ThemeImage.swift in Sources */,
-				81451E6B19D9DA9C927659DC4CDF1B3D /* ThemeManager.swift in Sources */,
-				D226FF15604B6A114387835606D62AA2 /* ThemeManager+ObjectiveC.swift in Sources */,
-				7E3BD173418585207C1C41377DD3B9E7 /* Thread+ThemeKit.swift in Sources */,
-				9DAC5DADBF60197FC01CFC5C984588B2 /* UserTheme.swift in Sources */,
+				B28A0D4364D2866DD874D4CE2E692E0A /* Pods-j2m-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		26CD702B2A0C7F96D322116B10CD00A9 /* PBXTargetDependency */ = {
+		501AF709A2786AA3A84B4BCD8037AD07 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = macOSThemeKit;
-			target = 4F2F8BE9ECE2B04C6D9CF9295316D0C1 /* macOSThemeKit */;
-			targetProxy = E2EA1346885739612652AF8688917F80 /* PBXContainerItemProxy */;
+			name = SwiftLint;
+			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
+			targetProxy = 03B13754F4C82DD0301DFB0937DC23CB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		3F3AA9BE539A5F1D0AEE410F6078665C /* Release */ = {
+		12B4EBDFF0478587DC32360A687A6F57 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 79B3B3BA55D8F6312F141C55904E412F /* macOSThemeKit.release.xcconfig */;
+			baseConfigurationReference = 7EAB1DA481EDDC005A251D3A5E6BE4CD /* SwiftLint.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/macOSThemeKit/macOSThemeKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/macOSThemeKit/macOSThemeKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/macOSThemeKit/macOSThemeKit.modulemap";
-				PRODUCT_MODULE_NAME = macOSThemeKit;
-				PRODUCT_NAME = macOSThemeKit;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		6F9310A82C2C846D261A7969D953397A /* Debug */ = {
+		155036E7897CA32A26512DE214333F37 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62EE66F02EC4D56D20C83322FD6F6449 /* macOSThemeKit.debug.xcconfig */;
+			baseConfigurationReference = F9388873BFC28B37569502EBC290E28A /* Pods-j2m.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -425,22 +274,23 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/macOSThemeKit/macOSThemeKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/macOSThemeKit/macOSThemeKit-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-j2m/Pods-j2m-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/macOSThemeKit/macOSThemeKit.modulemap";
-				PRODUCT_MODULE_NAME = macOSThemeKit;
-				PRODUCT_NAME = macOSThemeKit;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-j2m/Pods-j2m.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -512,43 +362,23 @@
 			};
 			name = Debug;
 		};
-		7DDB0CD43669CDBA860FEE9C980D3F01 /* Release */ = {
+		825BA5FAC3317D45740648EC38B22210 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6DC2B31D340E98E48280A9D77D4CA9EA /* Pods-j2m.release.xcconfig */;
+			baseConfigurationReference = 3EC0124719FE8EF5FDDD72C26F8A2F57 /* SwiftLint.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-j2m/Pods-j2m-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MODULEMAP_FILE = "Target Support Files/Pods-j2m/Pods-j2m.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		C0AB89DB0533D8E2B9201FA6579824B7 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -612,9 +442,9 @@
 			};
 			name = Release;
 		};
-		CCE7DB9D10D9519E5710D384429EFA92 /* Debug */ = {
+		D6FDA8CC4834DD28ED71DBEEF61DF565 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ACDEC41E9ABFDDD16E97E1884E6EB0D2 /* Pods-j2m.debug.xcconfig */;
+			baseConfigurationReference = E33EDFBA5D86E36EFF875D3614F34E96 /* Pods-j2m.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -648,11 +478,20 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		18AC9658A55EC25452871D0706E0A078 /* Build configuration list for PBXNativeTarget "Pods-j2m" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				155036E7897CA32A26512DE214333F37 /* Debug */,
+				D6FDA8CC4834DD28ED71DBEEF61DF565 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -662,20 +501,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		99D063C6B969971C17EEEFD324AA90E4 /* Build configuration list for PBXNativeTarget "Pods-j2m" */ = {
+		AE7B4FB01588B9E6DF09CB79FC7CE7BD /* Build configuration list for PBXAggregateTarget "SwiftLint" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CCE7DB9D10D9519E5710D384429EFA92 /* Debug */,
-				7DDB0CD43669CDBA860FEE9C980D3F01 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BAA636EBF495CCEBCFAC9E7E3FA3B3E3 /* Build configuration list for PBXNativeTarget "macOSThemeKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6F9310A82C2C846D261A7969D953397A /* Debug */,
-				3F3AA9BE539A5F1D0AEE410F6078665C /* Release */,
+				825BA5FAC3317D45740648EC38B22210 /* Debug */,
+				12B4EBDFF0478587DC32360A687A6F57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

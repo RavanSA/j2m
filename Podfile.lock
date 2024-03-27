@@ -1,16 +1,16 @@
 PODS:
-  - macOSThemeKit (1.2.3)
+  - SwiftLint (0.54.0)
 
 DEPENDENCIES:
-  - macOSThemeKit (~> 1.2.0)
+  - SwiftLint
 
 SPEC REPOS:
   trunk:
-    - macOSThemeKit
+    - SwiftLint
 
 SPEC CHECKSUMS:
-  macOSThemeKit: 651af12838675beac5547687226a270c294f8f84
+  SwiftLint: c1de071d9d08c8aba837545f6254315bc900e211
 
-PODFILE CHECKSUM: 427d652f5bad4759ffbae0af6a3ece1c57b30ed2
+PODFILE CHECKSUM: b3b92b648c35fb6a3e7a4361b84c21156fbca009
 
 COCOAPODS: 1.15.0

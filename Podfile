@@ -7,7 +7,7 @@ target 'j2m' do
 
   # Pods for testapp
 
-  pod 'macOSThemeKit', '~> 1.2.0'
+  pod 'SwiftLint'
 
 
 end
