@@ -1,0 +1,6 @@
+- uses: maierj/fastlane-action@v2.2.0
+  with:
+    lane: 'release'
+  env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+

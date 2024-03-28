@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AFB61B8038A2A6455B56F7DF /* Pods_j2m.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52CB168647FC6C82BB217A34 /* Pods_j2m.framework */; };
+		67E9B05011F73E557E5ABEFD /* Pods_j2m.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17887806C137C5E80C594B88 /* Pods_j2m.framework */; };
 		C917FF152BB3FF9E00016FF4 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C917FF142BB3FF9E00016FF4 /* Theme.swift */; };
 		C98FDA9A2BA9BFC200DE2CB6 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98FDA992BA9BFC200DE2CB6 /* Helpers.swift */; };
 		C98FDA9D2BA9DE0400DE2CB6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98FDA9C2BA9DE0400DE2CB6 /* SettingsViewController.swift */; };
@@ -37,9 +37,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		52CB168647FC6C82BB217A34 /* Pods_j2m.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_j2m.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BF785A04FB72AC5B8BA0BD4 /* Pods-j2m.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-j2m.debug.xcconfig"; path = "Target Support Files/Pods-j2m/Pods-j2m.debug.xcconfig"; sourceTree = "<group>"; };
-		7F69277C4FCF9675C26B0674 /* Pods-j2m.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-j2m.release.xcconfig"; path = "Target Support Files/Pods-j2m/Pods-j2m.release.xcconfig"; sourceTree = "<group>"; };
+		17887806C137C5E80C594B88 /* Pods_j2m.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_j2m.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83DDAF86909EBF85DEBCCA1F /* Pods-j2m.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-j2m.debug.xcconfig"; path = "Target Support Files/Pods-j2m/Pods-j2m.debug.xcconfig"; sourceTree = "<group>"; };
+		BA76DD5C77A8DADFCD25CD33 /* Pods-j2m.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-j2m.release.xcconfig"; path = "Target Support Files/Pods-j2m/Pods-j2m.release.xcconfig"; sourceTree = "<group>"; };
 		C917FF142BB3FF9E00016FF4 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		C98FDA992BA9BFC200DE2CB6 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		C98FDA9C2BA9DE0400DE2CB6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -81,17 +81,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFB61B8038A2A6455B56F7DF /* Pods_j2m.framework in Frameworks */,
+				67E9B05011F73E557E5ABEFD /* Pods_j2m.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6EE1F21DDB5FA28D13881521 /* Frameworks */ = {
+		50B641527D395F035D6AAB60 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				52CB168647FC6C82BB217A34 /* Pods_j2m.framework */,
+				17887806C137C5E80C594B88 /* Pods_j2m.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -99,8 +99,8 @@
 		840859BDD8F941745301AD94 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7BF785A04FB72AC5B8BA0BD4 /* Pods-j2m.debug.xcconfig */,
-				7F69277C4FCF9675C26B0674 /* Pods-j2m.release.xcconfig */,
+				83DDAF86909EBF85DEBCCA1F /* Pods-j2m.debug.xcconfig */,
+				BA76DD5C77A8DADFCD25CD33 /* Pods-j2m.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -130,7 +130,7 @@
 				C9A2C0142BA19A6C0090534B /* j2m */,
 				C9A2C0132BA19A6C0090534B /* Products */,
 				840859BDD8F941745301AD94 /* Pods */,
-				6EE1F21DDB5FA28D13881521 /* Frameworks */,
+				50B641527D395F035D6AAB60 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -250,7 +250,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9A2C0242BA19A6E0090534B /* Build configuration list for PBXNativeTarget "j2m" */;
 			buildPhases = (
-				9E2C2CAE6762AAC340AB1E48 /* [CP] Check Pods Manifest.lock */,
+				A203C874951237195063B628 /* [CP] Check Pods Manifest.lock */,
 				C9A2C00E2BA19A6C0090534B /* Sources */,
 				C9A2C00F2BA19A6C0090534B /* Frameworks */,
 				C9A2C0102BA19A6C0090534B /* Resources */,
@@ -314,7 +314,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9E2C2CAE6762AAC340AB1E48 /* [CP] Check Pods Manifest.lock */ = {
+		A203C874951237195063B628 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -382,7 +382,6 @@
 /* Begin XCBuildConfiguration section */
 		C9A2C0222BA19A6E0090534B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F69277C4FCF9675C26B0674 /* Pods-j2m.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -448,7 +447,6 @@
 		};
 		C9A2C0232BA19A6E0090534B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F69277C4FCF9675C26B0674 /* Pods-j2m.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -506,7 +504,7 @@
 		};
 		C9A2C0252BA19A6E0090534B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7BF785A04FB72AC5B8BA0BD4 /* Pods-j2m.debug.xcconfig */;
+			baseConfigurationReference = 83DDAF86909EBF85DEBCCA1F /* Pods-j2m.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -515,7 +513,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 37;
+				CURRENT_PROJECT_VERSION = 69;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -540,7 +538,7 @@
 		};
 		C9A2C0262BA19A6E0090534B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F69277C4FCF9675C26B0674 /* Pods-j2m.release.xcconfig */;
+			baseConfigurationReference = BA76DD5C77A8DADFCD25CD33 /* Pods-j2m.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -549,7 +547,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 37;
+				CURRENT_PROJECT_VERSION = 69;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
