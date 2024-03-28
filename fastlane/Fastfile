@@ -1,4 +1,4 @@
-default_platform(:ios)
+default_platform(:mac)
 
 platform :mac do
   desc "j2m continuous delivery"
@@ -27,16 +27,24 @@ lane :release do
   #add_git_tag(
   #  tag: tag
   #)
-  
+
+  release = get_github_release(url: "RavanSA/j2m",
+                                api_token: ENV['GITHUB_TOKEN'],
+                                version: "1.0.0")
+
+  puts "Release variable: #{release}" # Printing release variable
+
   push_to_git_remote
   
   set_github_release(
     repository_name: "RavanSA/j2m",
-    api_bearer: ENV["GITHUB_TOKEN"],
+    server_url: "https://api.github.com/repos/",
+    api_token: ENV["GITHUB_TOKEN"],
     name: "Release test",
-    tag_name: tag,
+    is_prerelease: true,
     description: "test",
     commitish: "main",
     upload_assets: ["j2m.app", "j2m.app.dSYM.zip"]
   )
+
 end
