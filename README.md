@@ -1,4 +1,4 @@
-# J2M is a native macOS application that converts JSON to models (currently only supporting Swift).
+# J2M is a native macOS application that converts JSON to models (currently only supporting Swift, Kotlin).
 
 <img width="873" alt="Screenshot 2024-03-23 at 19 48 35" src="https://github.com/RavanSA/j2m/assets/58227337/8b367eea-5d89-45ca-baee-fb87bd16f598">
 
