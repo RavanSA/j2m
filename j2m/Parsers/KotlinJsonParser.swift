@@ -10,23 +10,26 @@ import Foundation
 class KotlinJsonParser {
     
     var rawJsonText: String
-    var structsArray: Set<String>
+    var dataClassArray: Set<String>
     var propertyType: String = "val"
     var optionalSign: String = "?"
 
 
     init(rawJsonText: String) {
         self.rawJsonText = rawJsonText
-        self.structsArray = []
+        self.dataClassArray = []
     }
     
-    func convertToKotlinDataClass() {
+    @discardableResult
+    func convertToKotlinDataClass() -> String {
         if let jsonData = rawJsonText.data(using: .utf8),
            let jsonObject = try? JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
             let kotlinCode = generateDataClass(className: "Root", json: jsonObject)
             let userInfo: [String: Any] = ["model": kotlinCode]
             NotificationCenter.default.post(name: Notifications.didSelectLanguage, object: nil, userInfo: userInfo)
+            return kotlinCode
         }
+        return ""
     }
     
     func generateDataClass(className: String, json: [String: Any]) -> String {
@@ -36,25 +39,25 @@ class KotlinJsonParser {
             switch value {
             case let dictValue as [String: Any]:
                 let structName = capitalizeFirstLetter(key)
-                if !structsArray.contains(structName) {
+                if !dataClassArray.contains(structName) {
                     structsCode += "data class \(structName)(\n\(generatePropertiesCode(from: dictValue)) )\n\n"
-                    structsArray.insert(structName)
+                    dataClassArray.insert(structName)
                     structsCode += generateDataClass(className: structName, json: dictValue)
                 }
             case let arrayValue as [[String: Any]]:
                 let structName = capitalizeFirstLetter(key)
-                if !structsArray.contains(structName) {
+                if !dataClassArray.contains(structName) {
                     let propertiesCode = arrayValue[0].reduce("") { (result, arr) in
                         result + generatePropertiesCode(from: ["\(arr.key)": arr.value])
                     }
                     structsCode += generateDataClass(className: structName, json: arrayValue[0])
-                    structsArray.insert(structName)
+                    dataClassArray.insert(structName)
                 }
             default:
                 let structName = className.capitalized
-                if !structsArray.contains(structName) {
+                if !dataClassArray.contains(structName) {
                     structsCode += "data class \(structName)(\n\(generatePropertiesCode(from: json)))\n\n"
-                    structsArray.insert(structName)
+                    dataClassArray.insert(structName)
                 }
             }
         }

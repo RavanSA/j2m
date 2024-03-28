@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C917FF152BB3FF9E00016FF4 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C917FF142BB3FF9E00016FF4 /* Theme.swift */; };
+		C950A54D2BB591F7000DE776 /* j2mTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C950A54C2BB591F7000DE776 /* j2mTests.swift */; };
+		C950A5562BB5922E000DE776 /* SwiftParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C950A5552BB5922E000DE776 /* SwiftParserTest.swift */; };
+		C950A5582BB596C3000DE776 /* KotlinParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C950A5572BB596C3000DE776 /* KotlinParserTest.swift */; };
 		C98FDA9A2BA9BFC200DE2CB6 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98FDA992BA9BFC200DE2CB6 /* Helpers.swift */; };
 		C98FDA9D2BA9DE0400DE2CB6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98FDA9C2BA9DE0400DE2CB6 /* SettingsViewController.swift */; };
 		C98FDA9F2BA9DE1200DE2CB6 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C98FDA9E2BA9DE1200DE2CB6 /* Settings.storyboard */; };
@@ -35,8 +38,22 @@
 		C9C3987C2BAB0E25003DE7A7 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C3987B2BAB0E25003DE7A7 /* SettingsModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C950A54E2BB591F7000DE776 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9A2C00A2BA19A6C0090534B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9A2C0112BA19A6C0090534B;
+			remoteInfo = j2m;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		C917FF142BB3FF9E00016FF4 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		C950A54A2BB591F7000DE776 /* j2mTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = j2mTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C950A54C2BB591F7000DE776 /* j2mTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = j2mTests.swift; sourceTree = "<group>"; };
+		C950A5552BB5922E000DE776 /* SwiftParserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftParserTest.swift; sourceTree = "<group>"; };
+		C950A5572BB596C3000DE776 /* KotlinParserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KotlinParserTest.swift; sourceTree = "<group>"; };
 		C98FDA992BA9BFC200DE2CB6 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		C98FDA9C2BA9DE0400DE2CB6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C98FDA9E2BA9DE1200DE2CB6 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -73,6 +90,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C950A5472BB591F7000DE776 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C9A2C00F2BA19A6C0090534B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -83,6 +107,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C950A54B2BB591F7000DE776 /* j2mTests */ = {
+			isa = PBXGroup;
+			children = (
+				C950A5542BB5921B000DE776 /* KotlinTests */,
+				C950A5532BB59207000DE776 /* SwiftTests */,
+				C950A54C2BB591F7000DE776 /* j2mTests.swift */,
+			);
+			path = j2mTests;
+			sourceTree = "<group>";
+		};
+		C950A5532BB59207000DE776 /* SwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				C950A5552BB5922E000DE776 /* SwiftParserTest.swift */,
+			);
+			path = SwiftTests;
+			sourceTree = "<group>";
+		};
+		C950A5542BB5921B000DE776 /* KotlinTests */ = {
+			isa = PBXGroup;
+			children = (
+				C950A5572BB596C3000DE776 /* KotlinParserTest.swift */,
+			);
+			path = KotlinTests;
+			sourceTree = "<group>";
+		};
 		C98FDA982BA9BFAD00DE2CB6 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				C9A2C0142BA19A6C0090534B /* j2m */,
+				C950A54B2BB591F7000DE776 /* j2mTests */,
 				C9A2C0132BA19A6C0090534B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -114,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				C9A2C0122BA19A6C0090534B /* j2m.app */,
+				C950A54A2BB591F7000DE776 /* j2mTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -222,6 +274,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C950A5492BB591F7000DE776 /* j2mTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C950A5522BB591F7000DE776 /* Build configuration list for PBXNativeTarget "j2mTests" */;
+			buildPhases = (
+				C950A5462BB591F7000DE776 /* Sources */,
+				C950A5472BB591F7000DE776 /* Frameworks */,
+				C950A5482BB591F7000DE776 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C950A54F2BB591F7000DE776 /* PBXTargetDependency */,
+			);
+			name = j2mTests;
+			productName = j2mTests;
+			productReference = C950A54A2BB591F7000DE776 /* j2mTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C9A2C0112BA19A6C0090534B /* j2m */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9A2C0242BA19A6E0090534B /* Build configuration list for PBXNativeTarget "j2m" */;
@@ -249,6 +319,10 @@
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
+					C950A5492BB591F7000DE776 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = C9A2C0112BA19A6C0090534B;
+					};
 					C9A2C0112BA19A6C0090534B = {
 						CreatedOnToolsVersion = 15.2;
 					};
@@ -268,11 +342,19 @@
 			projectRoot = "";
 			targets = (
 				C9A2C0112BA19A6C0090534B /* j2m */,
+				C950A5492BB591F7000DE776 /* j2mTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C950A5482BB591F7000DE776 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C9A2C0102BA19A6C0090534B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -289,6 +371,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C950A5462BB591F7000DE776 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C950A5582BB596C3000DE776 /* KotlinParserTest.swift in Sources */,
+				C950A5562BB5922E000DE776 /* SwiftParserTest.swift in Sources */,
+				C950A54D2BB591F7000DE776 /* j2mTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C9A2C00E2BA19A6C0090534B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -318,6 +410,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C950A54F2BB591F7000DE776 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9A2C0112BA19A6C0090534B /* j2m */;
+			targetProxy = C950A54E2BB591F7000DE776 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		C9A2C01E2BA19A6E0090534B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -330,6 +430,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C950A5502BB591F7000DE776 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = project.j2mTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/j2m.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/j2m";
+			};
+			name = Debug;
+		};
+		C950A5512BB591F7000DE776 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = project.j2mTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/j2m.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/j2m";
+			};
+			name = Release;
+		};
 		C9A2C0222BA19A6E0090534B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -521,6 +657,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C950A5522BB591F7000DE776 /* Build configuration list for PBXNativeTarget "j2mTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C950A5502BB591F7000DE776 /* Debug */,
+				C950A5512BB591F7000DE776 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C9A2C00D2BA19A6C0090534B /* Build configuration list for PBXProject "j2m" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

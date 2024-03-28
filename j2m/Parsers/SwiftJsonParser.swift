@@ -36,8 +36,8 @@ class SwiftJsonParser: NSObject {
         self.structsArray = []
     }
     
-    
-    func convertToSwiftModel(structName: String?) {
+    @discardableResult
+    func convertToSwiftModel(structName: String?) -> String {
         if let jsonData = rawJsonText.data(using: .utf8),
             let jsonObject = try? JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
             var swiftCode = ""
@@ -48,7 +48,9 @@ class SwiftJsonParser: NSObject {
             }
             let userInfo: [String: Any] = ["model": swiftCode]
             NotificationCenter.default.post(name: Notifications.didSelectLanguage, object: nil, userInfo: userInfo)
+            return swiftCode
         }
+        return ""
     }
     
     
