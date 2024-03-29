@@ -8,14 +8,18 @@ platform :mac do
 end
 
 lane :release do
+
+  run_tests(scheme: "j2mTests")
+
   increment_build_number(
     xcodeproj: "j2m.xcodeproj"
   )
 
-  build_number = get_build_number.to_i + 1 
-  
-  tag = "v#{get_version_number}.#{build_number}" 
-  
+  build_number = get_build_number.to_i + 1
+
+  tag = "v#{get_version_number}.#{51}" 
+  puts "tag #{tag}"
+
   analyze_commits(match: "*")
   
   gym(
@@ -24,30 +28,30 @@ lane :release do
     destination: "platform=macOS"
   )
   
-  #add_git_tag(
-  #  tag: tag
-  #)
+  add_git_tag(
+    tag: tag
+  )
 
   release = get_github_release(url: "RavanSA/j2m",
                                 api_token: ENV['GITHUB_TOKEN'],
-                                version: "1.0.0")
+                                version: "v#{get_version_number}")
 
-  cocoapods(
-      clean: true,
-      use_bundle_exec: false
-  )
+  notes = conventional_changelog(format: 'markdown', 
+      title: 'Release j2m', 
+      display_title: true, 
+      commit_url: 'https://github.com/RavanSA/j2m')
 
-  puts "Release variable: #{release}" # Printing release variable
+  puts "Release variable: #{release}"
 
   push_to_git_remote
   
+
   set_github_release(
     repository_name: "RavanSA/j2m",
-    server_url: "https://api.github.com/repos/",
-    api_token: ENV["GITHUB_TOKEN"],
-    name: "Release test",
-    is_prerelease: true,
-    description: "test",
+    api_bearer: "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",
+    name: "Release v#{get_version_number}.#{build_number}",
+    is_prerelease: false,
+    description: notes,
     commitish: "main",
     upload_assets: ["j2m.app", "j2m.app.dSYM.zip"]
   )

@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+git_source(:github) {|j2m| "https://github.com/RavanSA/j2m" }
+
 gem "fastlane"
 gem "cocoapods"
 
