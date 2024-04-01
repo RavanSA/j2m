@@ -69,7 +69,7 @@ class SwiftJsonParser: NSObject {
             case let arrayValue as [[String: Any]]:
                 let structName = capitalizeFirstLetter(key)
                 if !structsArray.contains(structName) {
-                    let propertiesCode = arrayValue[0].reduce("") { (result, arr) in
+                    _ = arrayValue[0].reduce("") { (result, arr) in
                         result + generatePropertiesCode(from: ["\(arr.key)": arr.value])
                     }
                     structsCode += generateSwiftStructs(from: arrayValue[0], parentName: structName)

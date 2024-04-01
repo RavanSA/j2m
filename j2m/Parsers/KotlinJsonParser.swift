@@ -47,7 +47,7 @@ class KotlinJsonParser {
             case let arrayValue as [[String: Any]]:
                 let structName = capitalizeFirstLetter(key)
                 if !dataClassArray.contains(structName) {
-                    let propertiesCode = arrayValue[0].reduce("") { (result, arr) in
+                    _ = arrayValue[0].reduce("") { (result, arr) in
                         result + generatePropertiesCode(from: ["\(arr.key)": arr.value])
                     }
                     structsCode += generateDataClass(className: structName, json: arrayValue[0])

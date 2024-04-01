@@ -9,12 +9,12 @@
         <!--Json View Controller-->
         <scene sceneID="PEd-7d-5j0">
             <objects>
-                <viewController storyboardIdentifier="JsonViewController" id="bU7-R8-ocO" customClass="JsonViewController" customModule="testapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JsonViewController" id="bU7-R8-ocO" customClass="JsonViewController" customModule="j2m" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="tOy-S4-hL0">
                         <rect key="frame" x="0.0" y="0.0" width="547" height="944"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <box boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="c7E-B8-vpi" customClass="ContentBar" customModule="testapp" customModuleProvider="target">
+                            <box boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="c7E-B8-vpi" customClass="ContentBar" customModule="j2m" customModuleProvider="target">
                                 <rect key="frame" x="20" y="894" width="507" height="30"/>
                                 <view key="contentView" id="vYU-D8-bBl">
                                     <rect key="frame" x="0.0" y="0.0" width="507" height="30"/>
@@ -45,7 +45,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="igx-Xr-Cc3"/>
                                                         </constraints>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" focusRingType="none" alignment="left" title="Root" placeholderString="Root" usesSingleLineMode="YES" id="Qku-pV-Ag6" customClass="VerticallyCenteredTextFieldCell" customModule="testapp" customModuleProvider="target">
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" focusRingType="none" alignment="left" title="Root" placeholderString="Root" usesSingleLineMode="YES" id="Qku-pV-Ag6" customClass="VerticallyCenteredTextFieldCell" customModule="j2m" customModuleProvider="target">
                                                             <font key="font" metaFont="systemSemibold" size="13"/>
                                                             <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -72,17 +72,28 @@
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
+                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BuP-KO-iwt">
+                                            <rect key="frame" x="299" y="4" width="59" height="16"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="Beautify" id="diX-BY-GIM">
+                                                <font key="font" metaFont="systemBold"/>
+                                                <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="WTb-Hf-PCf" firstAttribute="top" secondItem="UGx-aw-CdH" secondAttribute="top" id="1gL-1H-vCL"/>
                                         <constraint firstItem="k8N-ln-zI9" firstAttribute="bottom" secondItem="WTb-Hf-PCf" secondAttribute="bottom" id="21d-DA-6uP"/>
+                                        <constraint firstItem="BuP-KO-iwt" firstAttribute="bottom" secondItem="UGx-aw-CdH" secondAttribute="bottom" constant="1" id="7R2-nQ-QMK"/>
                                         <constraint firstItem="UGx-aw-CdH" firstAttribute="leading" secondItem="WTb-Hf-PCf" secondAttribute="trailing" constant="20" id="A45-jn-VgK"/>
                                         <constraint firstItem="UGx-aw-CdH" firstAttribute="top" secondItem="k8N-ln-zI9" secondAttribute="top" id="Dxm-Qs-ekk"/>
+                                        <constraint firstItem="BuP-KO-iwt" firstAttribute="top" secondItem="UGx-aw-CdH" secondAttribute="top" id="G2d-tk-nmx"/>
                                         <constraint firstItem="k8N-ln-zI9" firstAttribute="leading" secondItem="vYU-D8-bBl" secondAttribute="leading" constant="8" id="Nle-tx-U25"/>
                                         <constraint firstItem="WTb-Hf-PCf" firstAttribute="width" secondItem="vYU-D8-bBl" secondAttribute="width" multiplier="0.4" id="ZlC-0v-Z79"/>
                                         <constraint firstAttribute="bottom" secondItem="k8N-ln-zI9" secondAttribute="bottom" constant="5" id="d6y-Sx-IaG"/>
                                         <constraint firstItem="UGx-aw-CdH" firstAttribute="top" secondItem="vYU-D8-bBl" secondAttribute="top" constant="10" id="iF3-H2-IYm"/>
                                         <constraint firstItem="WTb-Hf-PCf" firstAttribute="bottom" secondItem="UGx-aw-CdH" secondAttribute="bottom" id="kZT-Lr-VLp"/>
+                                        <constraint firstItem="BuP-KO-iwt" firstAttribute="leading" secondItem="UGx-aw-CdH" secondAttribute="leading" constant="25" id="lJu-hl-xGF"/>
                                         <constraint firstItem="WTb-Hf-PCf" firstAttribute="leading" secondItem="k8N-ln-zI9" secondAttribute="trailing" constant="8" id="rkz-74-Ylj"/>
                                     </constraints>
                                 </view>
@@ -130,6 +141,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="beautifier" destination="BuP-KO-iwt" id="9WU-Dh-uka"/>
                         <outlet property="jsonTextView" destination="OsC-uU-2kf" id="fjI-HK-VYP"/>
                         <outlet property="structName" destination="gdW-Zl-Et1" id="of3-P9-Cjq"/>
                     </connections>

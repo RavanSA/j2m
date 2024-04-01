@@ -49,7 +49,7 @@
                                                 <action selector="onSettingsClicked:" target="bU7-R8-ocO" id="Thi-W5-yMf"/>
                                             </connections>
                                         </button>
-                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dAQ-Nk-BJk">
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dAQ-Nk-BJk">
                                             <rect key="frame" x="6" y="5" width="4" height="15"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" enabled="NO" alignment="left" usesSingleLineMode="YES" id="x5P-s7-Lr1">
                                                 <font key="font" metaFont="systemSemibold" size="13"/>

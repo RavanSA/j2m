@@ -11,6 +11,7 @@ class JsonViewController: NSViewController {
 
     @IBOutlet weak var jsonTextView: NSTextView!
     @IBOutlet weak var structName: NSTextField!
+    @IBOutlet weak var beautifier: NSTextField!
     
     var onJsonChangeText: ((String, String?) -> ())?
 
@@ -19,6 +20,9 @@ class JsonViewController: NSViewController {
         view.wantsLayer = true
         view.layer?.backgroundColor = ThemeColor.jsonBackgroundColor.cgColor
         jsonTextView.delegate = self
+        
+        let gestureRecognizer = NSClickGestureRecognizer(target: self, action: #selector(beautifyJson))
+        beautifier.addGestureRecognizer(gestureRecognizer)
     }
     
     func colorizeJSONString(_ jsonString: String) -> NSAttributedString? {
@@ -77,6 +81,21 @@ class JsonViewController: NSViewController {
     
     @IBAction func structNameAction(_ sender: Any) {
         onJsonChangeText?(jsonTextView.string, structName.stringValue)
+    }
+    
+    @objc func beautifyJson() {
+        if let jsonData = jsonTextView.string.data(using: .utf8),
+           let json = try? JSONSerialization.jsonObject(with: jsonData, options: []) {
+            if let prettyJsonData = try? JSONSerialization.data(withJSONObject: json, options: .prettyPrinted) {
+                if let prettyPrintedString = String(data: prettyJsonData, encoding: .utf8) {
+                    jsonTextView.string = prettyPrintedString
+                }
+            } else {
+                print("Error: Unable to pretty print JSON data.")
+            }
+        } else {
+            print("Error: Malformed JSON data.")
+        }
     }
     
 }
