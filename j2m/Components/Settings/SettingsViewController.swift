@@ -56,7 +56,7 @@ extension SettingsViewController: NSTableViewDataSource, NSTableViewDelegate {
         if ParserController.shared.selectedLanguage ?? .swift == .swift {
             switch rowIndex {
             case 0:
-                ParserController.shared.swiftOptionForCodingKeys = sender.state == .on
+                ParserController.shared.swiftOptions.codingKeys = sender.state == .on
                 if var settingsOption = settingsOptionForSwift[ParserController.shared.selectedLanguage ?? .swift] {
                     if let index = settingsOption.firstIndex(where: { $0.id == 1 }) {
                         settingsOption[index].changeCurrentState(isActive: sender.state == .on)
@@ -64,7 +64,7 @@ extension SettingsViewController: NSTableViewDataSource, NSTableViewDelegate {
                     }
                 }
             case 1:
-                ParserController.shared.swiftOptionForVarOrLet = sender.state == .on
+                ParserController.shared.swiftOptions.varOrLet = sender.state == .on
                 if var settingsOption = settingsOptionForSwift[ParserController.shared.selectedLanguage ?? .swift] {
                     if let index = settingsOption.firstIndex(where: { $0.id == 2 }) {
                         settingsOption[index].changeCurrentState(isActive: sender.state == .on)
@@ -72,7 +72,7 @@ extension SettingsViewController: NSTableViewDataSource, NSTableViewDelegate {
                     }
                 }
             case 2:
-                ParserController.shared.swiftOptionForOptional = sender.state == .on
+                ParserController.shared.swiftOptions.optionalProperties = sender.state == .on
                 if var settingsOption = settingsOptionForSwift[ParserController.shared.selectedLanguage ?? .swift] {
                     if let index = settingsOption.firstIndex(where: { $0.id == 3 }) {
                         settingsOption[index].changeCurrentState(isActive: sender.state == .on)
@@ -82,7 +82,6 @@ extension SettingsViewController: NSTableViewDataSource, NSTableViewDelegate {
             default:
                 break
             }
-
         }
     }
     

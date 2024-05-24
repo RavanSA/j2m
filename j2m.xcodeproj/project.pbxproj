@@ -11,6 +11,7 @@
 		C950A54D2BB591F7000DE776 /* j2mTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C950A54C2BB591F7000DE776 /* j2mTests.swift */; };
 		C950A5562BB5922E000DE776 /* SwiftParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C950A5552BB5922E000DE776 /* SwiftParserTest.swift */; };
 		C950A5582BB596C3000DE776 /* KotlinParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C950A5572BB596C3000DE776 /* KotlinParserTest.swift */; };
+		C97BC60D2C007CB00023609C /* LanguagesSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97BC60C2C007CB00023609C /* LanguagesSettings.swift */; };
 		C98FDA9A2BA9BFC200DE2CB6 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98FDA992BA9BFC200DE2CB6 /* Helpers.swift */; };
 		C98FDA9D2BA9DE0400DE2CB6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98FDA9C2BA9DE0400DE2CB6 /* SettingsViewController.swift */; };
 		C98FDA9F2BA9DE1200DE2CB6 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C98FDA9E2BA9DE1200DE2CB6 /* Settings.storyboard */; };
@@ -54,6 +55,7 @@
 		C950A54C2BB591F7000DE776 /* j2mTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = j2mTests.swift; sourceTree = "<group>"; };
 		C950A5552BB5922E000DE776 /* SwiftParserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftParserTest.swift; sourceTree = "<group>"; };
 		C950A5572BB596C3000DE776 /* KotlinParserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KotlinParserTest.swift; sourceTree = "<group>"; };
+		C97BC60C2C007CB00023609C /* LanguagesSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesSettings.swift; sourceTree = "<group>"; };
 		C98FDA992BA9BFC200DE2CB6 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		C98FDA9C2BA9DE0400DE2CB6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C98FDA9E2BA9DE1200DE2CB6 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 				C9A2C0562BA2E2570090534B /* ParserController.swift */,
 				C9A2C0582BA3094D0090534B /* SwiftJsonParser.swift */,
 				C9C398752BA637EF003DE7A7 /* KotlinJsonParser.swift */,
+				C97BC60C2C007CB00023609C /* LanguagesSettings.swift */,
 			);
 			path = Parsers;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				C9A2C0592BA3094D0090534B /* SwiftJsonParser.swift in Sources */,
 				C9C3987A2BAB0C0F003DE7A7 /* SettingsCustomTableViewCell.swift in Sources */,
 				C98FDA9D2BA9DE0400DE2CB6 /* SettingsViewController.swift in Sources */,
+				C97BC60D2C007CB00023609C /* LanguagesSettings.swift in Sources */,
 				C9A2C0342BA1B6220090534B /* LanguageTableViewCell.swift in Sources */,
 				C9A2C0572BA2E2570090534B /* ParserController.swift in Sources */,
 				C9A2C0362BA1B6750090534B /* FontManager.swift in Sources */,

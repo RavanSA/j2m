@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+enum Languages: String {
+    case swift = "Swift"
+    case kotlin = "Kotlin"
+}
+
+struct SwiftOptions {
+    var codingKeys: Bool
+    var varOrLet: Bool
+    var optionalProperties: Bool
+}

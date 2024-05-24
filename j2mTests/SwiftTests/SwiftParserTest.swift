@@ -61,8 +61,9 @@ final class SwiftParserTest: XCTestCase {
         let parser = SwiftJsonParser(rawJsonText: rawJsonText, enumCodingKeysOption: true, varOrLet: true, isPropertiesOptional: true)
         
         // When
-        parser.convertToSwiftModel(structName: "Welcome")
+        _ = parser.convertToModel(rootName: "Welcome")
 
+        // Then
         XCTAssertEqual(expectedStructCount, parser.structsArray.count)
     }
     

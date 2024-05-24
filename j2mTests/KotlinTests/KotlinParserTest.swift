@@ -10,6 +10,7 @@ import XCTest
 
 class KotlinJsonParserTests: XCTestCase {
 
+
     func testGeneratePropertiesCodeForString() {
         // Given
         let parser = KotlinJsonParser(rawJsonText: "")
@@ -35,55 +36,54 @@ class KotlinJsonParserTests: XCTestCase {
     }
     
     func testGenerateDataClassForString() {
-        func testConvertToSwiftModel() {
-            // Given
-            let rawJsonText = """
+        // Given
+        let rawJsonText = """
+        {
+          "university": "University A",
+          "courses": [
             {
-              "university": "University A",
-              "courses": [
+              "department": "Computer Science",
+              "courseList": [
                 {
-                  "department": "Computer Science",
-                  "courseList": [
-                    {
-                      "courseCode": "CS101",
-                      "courseName": "Introduction to Computer Science",
-                      "credits": 3
-                    },
-                    {
-                      "courseCode": "CS201",
-                      "courseName": "Data Structures and Algorithms",
-                      "credits": 4
-                    }
-                  ]
+                  "courseCode": "CS101",
+                  "courseName": "Introduction to Computer Science",
+                  "credits": 3
                 },
                 {
-                  "department": "Mathematics",
-                  "courseList": [
-                    {
-                      "courseCode": "MATH101",
-                      "courseName": "Calculus I",
-                      "credits": 4
-                    },
-                    {
-                      "courseCode": "MATH202",
-                      "courseName": "Linear Algebra",
-                      "credits": 3
-                    }
-                  ]
+                  "courseCode": "CS201",
+                  "courseName": "Data Structures and Algorithms",
+                  "credits": 4
+                }
+              ]
+            },
+            {
+              "department": "Mathematics",
+              "courseList": [
+                {
+                  "courseCode": "MATH101",
+                  "courseName": "Calculus I",
+                  "credits": 4
+                },
+                {
+                  "courseCode": "MATH202",
+                  "courseName": "Linear Algebra",
+                  "credits": 3
                 }
               ]
             }
-            """
-            
-            let expectedStructCount = 3
-            
-            let parser = KotlinJsonParser(rawJsonText: rawJsonText)
-            
-            // When
-            parser.convertToKotlinDataClass()
-
-            XCTAssertEqual(expectedStructCount, parser.dataClassArray.count)
+          ]
         }
+        """
+        
+        let expectedStructCount = 3
+        
+        let parser = KotlinJsonParser(rawJsonText: rawJsonText)
+        
+        // When
+        _ = parser.convertToModel(rootName: nil)
+        
+        // Then
+        XCTAssertEqual(parser.dataClassArray.count, expectedStructCount)
     }
     
 }

@@ -7,66 +7,59 @@
 
 import Foundation
 
-enum Languages: String {
-    case swift = "Swift"
-    case kotlin = "Kotlin"
+protocol Parser {
+    @discardableResult
+    func convertToModel(rootName: String?) -> String?
 }
 
-class ParserController: NSObject {
+class ParserController {
     
     static let shared = ParserController()
     
-    var selectedLanguage: Languages? {
+    private var parser: Parser?
+    
+    var selectedLanguage: Languages? = .swift {
         didSet {
-            setLanguageForParsing()
+            updateParser()
         }
     }
     
     var jsonText: String? {
         didSet {
-            setLanguageForParsing()
+            updateParser()
         }
     }
     
     var structName: String? {
         didSet {
-            setLanguageForParsing()
+            updateParser()
         }
     }
-    
-    var swiftOptionForCodingKeys: Bool? {
-        didSet {
-            setLanguageForParsing()
-        }
-    }
-    
-    var swiftOptionForVarOrLet: Bool? {
-        didSet {
-            setLanguageForParsing()
-        }
-    }
-    
-    var swiftOptionForOptional: Bool? {
-        didSet {
-            setLanguageForParsing()
-        }
-    }
-    
-    override init() {
-        super.init()
 
+    var swiftOptions: SwiftOptions = SwiftOptions(codingKeys: false, varOrLet: false, optionalProperties: false) {
+        didSet {
+            updateParser()
+        }
     }
     
-    private func setLanguageForParsing() {
+    private init() {}
+    
+    private func updateParser() {
+        guard let selectedLanguage = selectedLanguage else {
+            return
+        }
+        
         switch selectedLanguage {
         case .swift:
-            SwiftJsonParser(rawJsonText: jsonText ?? "", enumCodingKeysOption: swiftOptionForCodingKeys ?? false, varOrLet: swiftOptionForVarOrLet ?? false, isPropertiesOptional: swiftOptionForOptional ?? false).convertToSwiftModel(structName: structName)
-            break
+            parser = SwiftJsonParser(rawJsonText: jsonText ?? "",
+                                                 enumCodingKeysOption: swiftOptions.codingKeys,
+                                                 varOrLet: swiftOptions.varOrLet,
+                                                 isPropertiesOptional: swiftOptions.optionalProperties)
         case .kotlin:
-            KotlinJsonParser(rawJsonText: jsonText ?? "").convertToKotlinDataClass()
-        default:
-            SwiftJsonParser(rawJsonText: jsonText ?? "", enumCodingKeysOption: swiftOptionForCodingKeys ?? false, varOrLet: swiftOptionForVarOrLet ?? false, isPropertiesOptional: swiftOptionForOptional ?? false).convertToSwiftModel(structName: structName)
+            parser = KotlinJsonParser(rawJsonText: jsonText ?? "")
         }
+        
+       _ = parser?.convertToModel(rootName: structName)
     }
     
 }

@@ -7,13 +7,12 @@
 
 import Foundation
 
-class KotlinJsonParser {
-    
+class KotlinJsonParser: Parser {
+
     var rawJsonText: String
     var dataClassArray: Set<String>
     var propertyType: String = "val"
     var optionalSign: String = "?"
-
 
     init(rawJsonText: String) {
         self.rawJsonText = rawJsonText
@@ -21,7 +20,7 @@ class KotlinJsonParser {
     }
     
     @discardableResult
-    func convertToKotlinDataClass() -> String {
+    func convertToModel(rootName: String?) -> String? {
         if let jsonData = rawJsonText.data(using: .utf8),
            let jsonObject = try? JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
             let kotlinCode = generateDataClass(className: "Root", json: jsonObject)
